@@ -8,7 +8,7 @@ build-job:
   script:
     - mkdir build
     # - pdflatex -output-directory=build main.tex 
-    - latexmk -pdf -pdflatex="lualatex -file-line-error %O %S" -outdir=build glossary.tex
+    - latexmk -f -pdf -pdflatex="lualatex -file-line-error %O %S" -outdir=build glossary.tex
     - echo BUILD_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:
