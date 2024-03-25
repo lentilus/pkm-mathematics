@@ -32,7 +32,7 @@ release-job:
     tag_name: '$CI_COMMIT_SHORT_SHA'
     assets:
       links:
-        - name: 'compiled pdf'
+        - name: 'pdf'
           # Use variables to build a URL to access the artifacts
           # ${CI_PROJECT_URL} is the repository URL
           # ${BUILD_JOB_ID} is from the previous job,
