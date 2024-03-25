@@ -15,13 +15,12 @@
     function references(zettel)
         local file = io.open(zettel.."/references", "r")
         if file:lines() ~= nil then
-            tex.print("\\begin{enumerate}")
-        end
-        for line in file:lines() do
-            tex.print("\\item \\hyperlink{"..line.."}{"..line.."}")
-        end
-        if file:lines() ~= nil then
-            tex.print("\\end{enumerate}")
+            tex.print("not nil")
+            -- tex.print("\\begin{itemize}")
+            for line in file:lines() do
+                tex.print("\\hyperlink{"..line.."}{"..line.."}")
+            end
+            -- tex.print("\\end{itemize}")
         end
         file:close()
         -- this is necessary
