@@ -12,11 +12,13 @@
 \begin{luacode}
     require 'lfs'
   
-    function testing(zettel)
+    function references(zettel)
         local file = io.open(zettel.."/references", "r")
+        tex.print("\\begin{enumerate}")
         for line in file:lines() do
-            tex.print("\\hyperlink{"..line.."}{"..line.."}")
+            tex.print("\\item \\hyperlink{"..line.."}{"..line.."}")
         end
+        tex.print("\\end{enumerate}")
         file:close()
         -- this is necessary
         collectgarbage("collect")
@@ -41,7 +43,7 @@
     \hypertarget{#1}{\section*{#1}}
     \def\temp{#1}
 }{%
-    \expandafter\directlua\expandafter{testing("\temp")}
+    \expandafter\directlua\expandafter{references("\temp")}
     \newpage
 }%
 
