@@ -14,8 +14,8 @@
   
     function testing(zettel)
         local file = io.open(zettel.."/references", "r")
-        local references = file:lines()
-        for line in references do
+        -- local references = file:lines()
+        for line in file:lines() do
             tex.print("\\hyperlink{"..line.."}{"..line.."}")
         end
         file:close()
