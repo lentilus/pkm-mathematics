@@ -12,16 +12,11 @@
 \begin{luacode}
     require 'lfs'
   
-    function references(zettel)
+    function testing(zettel)
         local file = io.open(zettel.."/references", "r")
-        -- if file:lines() ~= nil then
-            tex.print("not nil")
-            -- tex.print("\\begin{itemize}")
-            for line in file:lines() do
-                tex.print("\\hyperlink{"..line.."}{"..line.."}")
-            end
-            -- tex.print("\\end{itemize}")
-        -- end
+        for line in file:lines() do
+            tex.print("\\hyperlink{"..line.."}{"..line.."}")
+        end
         file:close()
         -- this is necessary
         collectgarbage("collect")
@@ -46,7 +41,7 @@
     \hypertarget{#1}{\section*{#1}}
     \def\temp{#1}
 }{%
-    \expandafter\directlua\expandafter{references("\temp")}
+    \expandafter\directlua\expandafter{testing("\temp")}
     \newpage
 }%
 
