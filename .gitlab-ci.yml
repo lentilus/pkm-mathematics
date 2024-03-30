@@ -7,8 +7,7 @@ build-job:
   image: tianon/latex
   script:
     - mkdir build
-    # - pdflatex -output-directory=build main.tex 
-    - latexmk -f -pdf -pdflatex="lualatex -file-line-error %O %S" -outdir=build glossary.tex
+    - latexmk -pdf -pdflatex="lualatex -interaction=batchmode" -outdir=build glossary.tex
     - echo BUILD_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:
