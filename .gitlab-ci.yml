@@ -6,11 +6,12 @@ build-job:
   stage: build
   image: tianon/latex
   script:
-    - latexmk -pdf -f -norc -pdflatex="lualatex -interaction=batchmode" glossary.tex
+    - mkdir build
+    - latexmk -pdf -f -norc -pdflatex="lualatex -interaction=batchmode" -outdir=build glossary.tex
     - echo BUILD_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:
-      - glossary.pdf
+      - build/glossary.pdf
     reports:
       # export the environment statement so we can access it in the release stage
       dotenv: CI_JOB_ID.env
@@ -35,6 +36,6 @@ release-job:
           # ${CI_PROJECT_URL} is the repository URL
           # ${BUILD_JOB_ID} is from the previous job,
           # the build stage, that contains the artifact
-          url: '${CI_PROJECT_URL}/-/jobs/${BUILD_JOB_ID}/artifacts/file/glossary.pdf'
+          url: '${CI_PROJECT_URL}/-/jobs/${BUILD_JOB_ID}/artifacts/file/build/glossary.pdf'
   only:
     - master # only execute the release if the pipeline runs for the main branch
