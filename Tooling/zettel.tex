@@ -1,0 +1,14 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Tooling}
+    To work on the zettelkasten I use my own tool: xettelkasten. It is written in bash and focusses on quick zettel creation and navigation using nvim and tmux. This is nothing new and there are plenty of foss zettelkasten apps, but none of them leverage the full potential of latex.\\
+
+    My zettelkasten implementation is unique, because every zettel is a standalone tex file that can be compiled and viewed on its own.\\
+
+    Using the xettelkasten git integration I can publish (commiti) the current state of my zettelkasten by pressing just 3 keys on my keyboard. For every commit to the git repository a pipeline is triggered that compiles this pdf from the source files of all individual zettel and publishes it as a release.
+\end{zettel}
+\end{document}
