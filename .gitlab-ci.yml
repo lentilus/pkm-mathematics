@@ -38,5 +38,6 @@ release-job:
           # ${BUILD_JOB_ID} is from the previous job,
           # the build stage, that contains the artifact
           url: '${CI_PROJECT_URL}/-/jobs/${BUILD_JOB_ID}/artifacts/file/glossary.pdf'
+          filepath: '/export/glossary.pdf'
   only:
     - master # only execute the release if the pipeline runs for the main branch
