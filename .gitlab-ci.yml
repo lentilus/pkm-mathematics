@@ -6,8 +6,7 @@ build-job:
   stage: build
   image: tianon/latex
   script:
-    - mkdir build
-    - latexmk -pdf -norc -pdflatex="lualatex -interaction=batchmode" glossary.tex
+    - latexmk -pdf -f -norc -pdflatex="lualatex -interaction=batchmode" glossary.tex
     - echo BUILD_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:
