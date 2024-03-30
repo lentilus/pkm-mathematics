@@ -20,14 +20,19 @@ function refs(zettel)
         tex.print("\\newline","\\newline", "\\textit{no references}")
     else
         local file = io.open(zettel.."/references", "r")
-        -- tex.print("\\newline", "\\textbf{References}")
         tex.print("\\begin{itemize}", "\\renewcommand{\\labelitemi}{$\\rightarrow$}")
+        local no_reference = true
         for line in file:lines() do
             line = line:gsub("_", " ")
             tex.print("\\item \\hyperlink{"..line.."}{\\textit{"..line.."}}")
+            no_reference = false
         end
         tex.print("\\end{itemize}")
         file:close()
+
+        if no_reference then
+            tex.print("\\newline","\\newline", "\\textit{no references}")
+        end
         -- this is necessary
         collectgarbage("collect")
     end
