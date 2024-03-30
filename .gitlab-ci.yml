@@ -7,11 +7,11 @@ build-job:
   image: tianon/latex
   script:
     - mkdir build
-    - latexmk -pdf -pdflatex="lualatex -interaction=batchmode" -outdir=build glossary.tex
+    - latexmk -pdf -norc -pdflatex="lualatex -interaction=batchmode" glossary.tex
     - echo BUILD_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:
-      - build/glossary.pdf
+      - glossary.pdf
     reports:
       # export the environment statement so we can access it in the release stage
       dotenv: CI_JOB_ID.env
