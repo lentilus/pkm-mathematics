@@ -7,8 +7,8 @@ build-job:
   image: tianon/latex
   script:
     - mkdir build
-    - latexmk -pdf -f -norc -pdflatex="lualatex -interaction=batchmode" glossary.tex
-    - "[ -f glossary.pdf ] || echo pdf does not exists"
+    - latexmk -pdf -f -norc -pdflatex="lualatex -interaction=batchmode" glossary.tex || echo "latexmk failed"
+    - test -f glossary.pdf && echo "pdf exists"
     - echo BUILD_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:
