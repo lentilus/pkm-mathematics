@@ -37,7 +37,8 @@ function refs(zettel)
                 if line ~= "" then
                     line = line:gsub("_", " ")
                     tex.print("\\item \\hyperlink{"..line.."}{\\textit{"..line.."}}")
-                    texio.write_nl("linking reference: "..line)
+                    texio.write_nl("printing reference:")
+                    texio.write_nl(line)
                 end
             end
             tex.print("\\end{itemize}")
@@ -76,12 +77,13 @@ end
 \end{luacode}
 
 \renewenvironment{zettel}[1]{%
-    \begin{mdframed}[nobreak=true, topline=false, bottomline=false, rightline=false]
+    \begin{mdframed}[nobreak=true, topline=false,bottomline=false, rightline=false]
     \hypertarget{#1}{\section*{#1}}
     \def\temp{#1}
 }{%
     \expandafter\directlua\expandafter{refs("\temp")}
     \end{mdframed}
+    \directlua{texio.write_nl("debug: end of zettel")}
 }%
 
 \begin{document}
