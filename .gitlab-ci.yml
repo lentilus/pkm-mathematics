@@ -23,7 +23,7 @@ export-anki-flashcards:
   image: python:latest
   script:
     - pip install git+https://gitlab.com/lentilus/xettel-to-anki.git
-    - xetteltoanki . zettelkasten.apkg
+    - xetteltoanki ./ zettelkasten.apkg
     - echo ANKI_JOB_ID=$CI_JOB_ID >> CI_JOB_ID.env
   artifacts:
     paths:

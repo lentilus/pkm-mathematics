@@ -9,17 +9,26 @@
 \begin{question}
     Wie ist die Definition eines metr. Raumes?
 \end{question}
-
-    Sei $(X,d)$ - metrischer Raum, $X \subset Y$ - Teilmenge, $d_Y := d_{X_{|_{Y \times Y} } }  $ 
+\begin{definition}[metrischer Raum]
+    Sei $X$ - Menge, $d:X \times X \longrightarrow \R$ - Abbildung. Wir nennen $(X,d)$ metrischen Raum, wenn $\forall x,y,z \in X$ 
+    \begin{enumerate}
+        \item (Positive Definitheit) $d(x,y) \geq 0$ und $d(x,y)= 0 \implies x = y$ 
+        \item (Symmetrie) $d(x,y) = d(y,x)$ 
+        \item (Dreiecksunglecihung) $d(x,y) + d(y,z) \geq d(x,z)$ 
+    \end{enumerate}
+    
+\end{definition}
 
 \end{flashcard}
 
 % TODO
-Seien ... metr. R"aume
-\begin{itemize}
-    \item $d_E \dots  = \dots$ 
-    \item $d_{max}  \dots  = \dots$ 
-    \item $d_{sum}  \dots  = \dots$ 
-\end{itemize}
+
+% Sei $(X,d)$ - metrischer Raum, $X \subset Y$ - Teilmenge, $d_Y := d_{X_{|_{Y \times Y} } }  $ 
+% Seien ... metr. R"aume
+% \begin{itemize}
+%     \item $d_E \dots  = \dots$ 
+%     \item $d_{max}  \dots  = \dots$ 
+%     \item $d_{sum}  \dots  = \dots$ 
+% \end{itemize}
 \end{zettel}
 \end{document}
