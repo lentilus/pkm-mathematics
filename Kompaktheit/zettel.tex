@@ -1,0 +1,32 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Kompaktheit}
+\begin{flashcard}
+\subsubsection*{Heine-Borelsche Eigenschaft}
+\begin{question}
+    Heine-Borelsche Eigenschaft
+\end{question}
+\[
+    K \subset X \text{ kompakt falls } \forall U \text{ offene "Uberdeckung besitzt end. Teil"uberdeckung } 
+.\]
+\end{flashcard}
+
+\subsubsection*{Eigenschaften}
+\begin{itemize}
+    \item $[a,b] \subset \R$ ist kompakt,  $-\infty < a,b < \infty $
+    \item $F$ - abgeschl. K-kompakt $\implies F \cap K$ ist kompakt
+    \item Unedliche $E \subset K $-kompakt  $\implies \exists x \in  HP (E) \cap K$ 
+    \item $K$ - kompakt $\implies $ $K$ ist abgeschl.
+\end{itemize}
+
+
+Korollar: Ist $K \subset X$ kompakt, $\set{x_n } \subset K \implies  \exists$ Teilfolge, die gegen $y \in  K$ konvergiert.
+
+Satz: $K$ - kompakt $\implies $  $K$ abgeschlossen und f"ur jede Folge $(x_n )$ sd $\set{x_n } \subset K \exists $ konvgt. Teilfolge.
+
+\end{zettel}
+\end{document}
