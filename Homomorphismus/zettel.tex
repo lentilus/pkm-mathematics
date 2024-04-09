@@ -1,0 +1,35 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Homomorphismus}
+\begin{flashcard}
+    \begin{definition}[Homomorphismus]
+
+        Seien $G$ , $H$ Gruppen.
+\[
+    \Phi: H \longrightarrow G
+.\]
+ist ein Homomorphismus, wenn
+\[
+    \Phi (n_1 \cdot n_2 ) = \Phi (n_1) \cdot \Phi (n_2)
+.\]
+    
+\end{definition}
+\end{flashcard}
+
+\begin{example}[Homomorphismen]
+Beispiele
+    \begin{itemize}
+        \item $\End(V) \stackrel{\cong}{\longrightarrow}  \GL(n \times n,\K) $ 
+        \item $\End(V) \longrightarrow  \GL(n \times n,\K) $ 
+        \item $ \det: \GL(n \times n,\K) \longrightarrow (K \setminus \set{0},\cdot )$ 
+    \end{itemize}
+    $\vdots$
+    
+\end{example}
+
+\end{zettel}
+\end{document}

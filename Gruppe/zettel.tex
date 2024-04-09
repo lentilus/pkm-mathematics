@@ -1,0 +1,28 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Gruppe}
+\begin{flashcard}
+
+    \begin{definition}[Gruppe]
+        Eine Gruppe $(G, \cdot )$ ist eine Menge $G$ mit Verkn"upfund $\cdot : G \times G \longrightarrow G$ 
+        \begin{enumerate}
+            \item $(a \cdot b) \cdot c =  a \cdot c) $ 
+            \item $\exists e \in  G$  sodass $e \cdot  a $ 
+            \item $\forall a \in  G \exists a^{-1} \in  G$  sodass $aa^{-1} =  a^{-1} a = e$ 
+        \end{enumerate}
+    
+\end{definition}
+\end{flashcard}
+\begin{remark}
+Eigenschaften
+\begin{itemize}
+    \item Das neutrale Element $e$ ist eindeutig.
+    \item Das inverse $a^{-1} $ eines Elements $a \in  G$ ist eindeutig
+\end{itemize}
+\end{remark}
+\end{zettel}
+\end{document}
