@@ -1,0 +1,25 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{topologischer Raum}
+\begin{flashcard}
+    Ein nichtleere Menge $X$ zusammen mit einer Familie an Teilmengen $\tau \subset P(X)$  hei"st topologer Raum .wenn
+    \begin{enumerate}
+        \item $\emptyset, X \in  \tau $ 
+        \item $U,V \in  \tau  \implies U \cap V \in  \tau $ 
+        \item $U_\alpha \in \tau \forall  \alpha \in I \implies \bigcup_{\alpha \in  I} U_{\alpha} \in  \tau  $ 
+    \end{enumerate}
+\end{flashcard}
+
+\begin{example}[topologischer Raum]
+    Sei $ (X,d) $-metrischer Raum.
+    \[
+        \tau^d = \set{U \subset X}{U \text{ ist offen } }
+    .\]
+    Dann ist (X,d) ein topologischer Raum.
+\end{example}
+\end{zettel}
+\end{document}

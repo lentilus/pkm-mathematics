@@ -1,0 +1,54 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{normierter Raum}
+\begin{flashcard}
+    \begin{definition}[normierter Raum]
+        Ein Vektorraum $V$ zusammen mit     
+        \[
+            || . ||: V \longrightarrow [0, \infty), v \mapsto  ||v||
+        .\]
+        falls folgene Axiome erf"ullt sind.
+        \begin{enumerate}
+            \item $||v|| = 0 \implies v = 0 $ 
+            \item $||v + w || \leq  ||v|| + ||w||$ 
+            \item $||\lambda \cdot v|| = |\lambda | \cdot ||v||$ 
+        \end{enumerate}
+    \end{definition}
+    Ein normierter VR ist ein metr. Raum mit $ d_{ ||\ ||} (v,w) := ||v -w||$ 
+\end{flashcard}
+
+\begin{remark}
+Beispiele f"ur lustige normierte R"aume :)
+\[
+    l_p (\mathbb{N}) := \set{ (x_1 )}{ ||(x_n)|| = \sqrt[p]{\sum_{i=0}^{\infty} 
+    x_i|^p}  } \text{ sind auch Banachr"aume } 
+.\]
+
+\begin{example}
+    $\R$ - VR V,
+    \[
+        \langle \ , \ \rangle : V \times V \longrightarrow \R, \langle v,w\rangle \in  \mathbb{R}
+    \] ,sodass 
+    \begin{enumerate}
+        \item $ \langle v,w\rangle  =  \langle w,v\rangle $ 
+        \item $ \langle v_1+\lambda v_2,w\rangle =  \langle v_1 ,w\rangle  + \lambda \langle v_2,w\rangle $ 
+        \item $ \langle v,v\rangle \geq 0$ und $ \langle v,v\rangle = 0 \iff  v = 0$ 
+        
+    \end{enumerate}
+    Man deiniert dann eine Norm $||v|| = \sqrt{ \langle v,v\rangle }$ 
+        
+\end{example}
+\end{remark}
+
+\begin{definition}
+    V-VR. Zwei Normen $||\ ||_1, ||\ ||_2 $ auf $V$ hei"sen "aquivalent, falls $\exists c, C \in  (0,\infty) $ sd
+    $\forall  v \in  V : c \cdot  ||v||_1 \leq ||v||_2 \leq C \cdot ||v||_1$ 
+
+    - hier fehlt ggf noch etwas. Nicht sicher...
+\end{definition}
+\end{zettel}
+\end{document}
