@@ -1,0 +1,30 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Normalteiler}
+\begin{flashcard}
+    $N \leq G$  mit $gNg^{-1}  \subseteq N$  $\forall g \in  G$  hei"st Normalteiler (auch, normale Untergruppe) und bezeichnet 
+    \[
+        N \trianglelefteq G 
+    .\]
+\end{flashcard}
+
+\begin{example}[Normalteiler]
+    ist $G$ abelsch, dann ist jede Untergruppe normal
+    \[
+        n \mathbb{Z} \triangleleft \mathbb{Z}
+    .\]
+    
+\end{example}
+
+\begin{theorem}
+    ist $N \trianglelefteq G$ ein Normalteiler, dann hat $\faktor{G}{N}$ genau eine Verkn"upfung sodass $\pi : G \longrightarrow \faktor{G}{N}$ ein Homomorphismus ist. Ausserdem ist $ \ker ( \pi ) = N$.
+\end{theorem}
+
+\end{zettel}
+\end{document}
+
+
