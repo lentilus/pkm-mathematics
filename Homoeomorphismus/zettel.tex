@@ -1,0 +1,44 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Homoeomorphismus}
+\begin{flashcard}
+    nicht zu verwechseln mit Homomorphismus!!!
+\begin{definition}[Homoeomorphismus]
+   Eine bijektive Abbldung $g:X \longrightarrow Y$  heisst ein Homomorphismus, falls $f^{-1} $  auch stetig ist.
+   \begin{remark}
+      Wir sehen Homoeomorphismen als eine Art von "Aquivalenz von top. R"aumen. 
+   \end{remark}
+\end{definition}
+
+\begin{example}
+    \begin{enumerate}
+    \item \[
+        f: \mathbb{R}^n \setminus \set{\emptyset} \longrightarrow  \mathbb{R}^n , f(x) =  \frac{x}{ ||x||}
+    .\]
+    $ ||f(x)|| = ||\frac{x}{||x||}|| = \frac{1}{ ||x||} ||x|| = 1 $ 
+    Das sind alle Vektoren mit L"ange 1.
+     \item \[
+         f: B_1 (0) \longrightarrow \mathbb{R}^n
+     .\]
+     \[
+         f(x) =  \frac{x}{1 - ||x||} 
+     .\]
+     $f$ bildet einen Strahl in sich selbst. $\implies f$ ist bijektiv. Keine Isometrie
+
+     \item Inversion $I: \mathbb{R}^n \setminus \set{0} \longrightarrow  \R^n \setminus 0$  \quad $I(x) = \frac{x}{ ||x||^2 } = \frac{1}{ ||x||}  $ Bildet auch einen Strahl in sich selbst. $I$ - Homoeomorphie
+    \end{enumerate}
+\end{example}
+
+\begin{example}[Stereographische Projektion]
+    Formel in n"achster Vorlesung. Hilft Sphere zu parametrisieren.
+\end{example}
+
+\end{flashcard}
+\end{zettel}
+\end{document}
+
+
