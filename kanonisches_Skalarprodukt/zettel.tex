@@ -1,0 +1,26 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{kanonisches Skalarprodukt}
+\begin{flashcard}
+    \begin{definition}[Skalarprodukt]
+        das Kanonische Skalarprodukt auf $\mathbb{R}^n $  ist die Abbildung 
+        \begin{align*}
+            \langle .,.\rangle : \mathbb{R}^n \times \mathbb{R}^n  &\longrightarrow \mathbb{R}\\
+            \begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}, \begin{pmatrix}y_2\\ \vdots\\ y_n\end{pmatrix}  \mapsto \sum_{i = 1}^{k} x_i  y_i  = (x_1 , \dots , x_n ) \cdot \begin{pmatrix}y_1\\ \dots\\ y_n\end{pmatrix}  = \bar{y}^t \cdot \bar{y} 
+        \end{align*}
+    \end{definition}
+\end{flashcard}
+\begin{enumerate}
+    \item $ \langle \bar{x},\bar{y}_1+\bar{y_2}\rangle  = \langle \bar{x},\bar{y_1}\rangle + \langle x_1,y_2\rangle $\\
+        $ \langle x,\lambda y \rangle = \lambda \langle x,y\rangle $
+            \item $ \langle x,y\rangle = \langle y,x\rangle $ 
+                \item $ \langle x,x\rangle \geq 0 $ und $ \langle x,x\rangle  = 0 \iff  x = 0 \in  \mathbb{R}^n$ 
+\end{enumerate}
+\end{zettel}
+\end{document}
+
+

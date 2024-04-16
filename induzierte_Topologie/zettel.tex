@@ -6,17 +6,24 @@
 \begin{document}
 \begin{zettel}{induzierte Topologie}
 \begin{flashcard}
-    $Y \subset X$ und $(A,\tau_X)  \tx{ topologischer Raum }$ 
+    $Y \subset X$ und $(X,\tau_X)  \tx{ topologischer Raum }$ 
     Dann ist $(Y,\tau_Y)$ ein topologischer Raum, wobei
     \[
         \tau_Y = \set{U \cap Y}{U \in  \tau _X} \tx{ (induziert) } 
     .\]
 \end{flashcard}
 
-\begin{remark}
-    $(X,d)$ - metr. Raum, $Y \subset X$ , so haben wir auf $Y$ zwei Strukturen top. R"aue (zwei Topologien) $(Y,\tau^d_{|_Y}), (Y, \tau^{d_{|Y \times Y}})$ 
-\end{remark}
+\begin{example}[duch Metrik induzierter topologischer Raum]
+    Sei $ (X,d) $-metrischer Raum.
+    \[
+        \tau^d = \set{U \subset X}{U \text{ ist offen bzgl. } d }
+    .\]
+    Dann ist $(X, \tau^d)$  ein topologischer Raum.
+\end{example}
 
+\begin{example}[Einschr"ankung?]
+    $(X,d)$ - metr. Raum, $Y \subset X$ , so haben wir auf $Y$ zwei Strukturen top. R"aue (zwei Topologien) $(Y,\tau^{d_{|_Y}}), (Y, \tau^{d_{|Y \times Y}})$ 
+\end{example}
 
 \end{zettel}
 \end{document}

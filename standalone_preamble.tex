@@ -22,7 +22,6 @@
 
 % amsthm config
 \declaretheoremstyle[notebraces={[}{]},headpunct=\newline,]{custom}
-
 \theoremstyle{custom}
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{lemma}{Lemma}
@@ -51,19 +50,23 @@
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\HP}{HP}
+\DeclareMathOperator{\rand}{rand}
+\DeclareMathOperator{\ord}{ord}
 
 % misc
 \setlength\parindent{0pt}
 
 \makeatletter
-
-% nice way to write sets
-\newcommand{\set}[1]{\@ifnextchar\bgroup {\left\{#1\setwithcondition} {\{#1\}} }
-\newcommand{\setwithcondition}[1]{\ \setseperator \ #1 \right\}}
-\newcommand{\setseperator}{\middle|}
-
+    % nice way to write sets
+    \newcommand{\set}[1]{\@ifnextchar\bgroup {\left\{#1\filteredset} {\{#1\}} }
+    \newcommand{\filteredset}[1]{\ \setseperator \ #1 \right\}}
+    \newcommand{\setseperator}{\middle|}
 \makeatother
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
 
+\newenvironment{flashcard}{}{}
+\newenvironment{question}{\paragraph{Question}}{\vspace{5pt}}
 \newenvironment{zettel}[1]
 {
     \begin{mdframed}[%
@@ -77,5 +80,3 @@
 {
     \end{mdframed}
 }
-\newenvironment{flashcard}{}{}
-\newenvironment{question}{\paragraph{Question}}{\vspace{5pt}}

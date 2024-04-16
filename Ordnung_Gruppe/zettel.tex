@@ -1,0 +1,41 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Ordnung Gruppe}
+\begin{flashcard}
+    \begin{definition}[Ordnung]
+        Die Ordnung von $g \in  G$ ist das kleinste $n$ sodass
+        \[
+            g^n  = e \tx{ oder } +\infty, \text{ falls } g^n  \neq  e \quad \forall n \in  \mathbb{N}
+        .\]
+    \end{definition}
+\end{flashcard}
+\begin{theorem}
+    $G$ - Gruppe
+   \[
+      \forall g \in  G : \tx{ ord}(g) = |\langle g \rangle|
+   .\] 
+\end{theorem}
+\begin{example}
+    Seien $0 \neq k \in  (\mathbb{Z}, +)$ 
+    \[
+       \tx{ ord}(0) = 1, \tx{ ord}(k) = + \infty
+    .\]
+\end{example}
+
+\begin{theorem}
+    \[
+        \ker (\phi) =  \set{k \in  \mathbb{Z}}{g^k =  e} \tx{ normierte Untergruppe }  \mathbb{Z} \stackrel{\tx{ "Ubungsblatte } }{\implies} \exists n \in  \mathbb{N} \tx{ sodass } n =  \begin{cases}
+            \ord(g) & \tx{  wenn } \ord(g) \neq + \infty\\
+            0 &  \ord(g) =  + \infty\\
+        \end{cases}
+    .\]
+    
+\end{theorem}
+\end{zettel}
+\end{document}
+
+
