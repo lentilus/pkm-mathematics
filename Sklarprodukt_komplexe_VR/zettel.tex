@@ -1,0 +1,27 @@
+%! TeX root = zettel.tex
+
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Sklarprodukt komplexe VR}
+\begin{flashcard}
+\begin{definition}[kanonisches Skalarprodukt in Complexen VR]
+    siehe Skript vom 19.04
+    \[
+        \langle \cdot,\cdot\rangle : \mathbb{C} \times \mathbb{C} \longrightarrow  \mathbb{C}, \begin{pmatrix}v_1,\vdots,v_n\end{pmatrix}, \begin{pmatrix}w_1,\vdots,w_n\end{pmatrix} \mapsto \sum_{i = 1}^{n} v_i \bar{w_i} 
+    .\]
+    Wo $ \bar{w_i} $ das komplex konjugierte von $w_i $ ist.
+\end{definition}
+\end{flashcard}
+\begin{lemma}
+    \[
+        |\langle v,w\rangle| \leq  ||v|| ||w||
+    .\]
+    
+\end{lemma}
+\end{zettel}
+\end{document}
+
+
