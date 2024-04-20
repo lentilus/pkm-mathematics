@@ -36,6 +36,7 @@
 % symbol shortcuts
 \newcommand{\zz}{\mathrm{Z\kern-.4em\raise-0.5ex\hbox{Z}}}
 \newcommand{\tx}[1]{\text{ #1 }}
+\newcommand{\from}{\colon}
 \newcommand{\La}{\mathcal{L}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\K}{\mathbb{K}}
@@ -56,6 +57,12 @@
 
 % misc
 \setlength\parindent{0pt}
+
+% quantifiers
+\let\oldforall\forall
+\let\oldexists\exists
+\renewcommand{\forall}{\ \oldforall}
+\renewcommand{\exists}{\ \oldexists}
 
 \makeatletter
     % nice way to write sets

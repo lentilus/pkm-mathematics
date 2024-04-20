@@ -1,0 +1,40 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{zusammenhaengend}
+\begin{flashcard}
+    \begin{definition}[zusammenh"angende Mengen]
+        $(x,\tau)$ ist nicht zus"ammenh"angend, falls
+\[
+\exists  A,B \subset X \quad A,B  \tx{ abgeschlossen, offen und dijunkt } (A \cap B =  \emptyset), X =  A \cup B \tx{ und } A,B = \emptyset
+.\]
+\begin{remark}
+$A$ - offen $\implies $ $X \setminus A =  B$ - abgeschlossen, D.h. sind $a$ , $B$ offen, so sind sie auch abgeschlossen.
+\end{remark}
+    \end{definition}
+\end{flashcard}
+\begin{definition}[zusammenhaengende top. R"aume]
+    $(X,\tau^x)$ topologischer Raum $Y \subset X$ - Teilmenge. Dann ist $Y$ nicht zusammenh"angend falls $ (Y,\tau^x)$ nicht zusammenh"angend.
+
+    Hier ist $\tau^y =  \set{U \cap Y}{U \in  \tau^x}$ - eine induzierte Topologie
+
+    In anderen Worten $Y$ ist nicht zusammenhaengend, falls
+
+    \begin{align*}
+    &\exists U_1 , U_2 \in  \tau^x \text{ s.d. } Y = ( Y \cap U_1 ) \cup ( Y \cap U_2), ( Y \cap U_1 ) \cap ( Y \cap U_2) = \emptyset \\
+    &\tx{ und } Y \cap Ui \neq  \emptyset \tx{ f"ur } i = 1,2
+    \end{align*}
+\end{definition}
+\end{zettel}
+
+\begin{lemma}
+$Y \subset \R $ ist zusammenh"angen $\iff $ $Y$ ist ein Intervall
+\end{lemma}
+
+\begin{theorem}
+Sei $(X,\tau^x)$-zusammenhaengende top. R"aum, $ (Y,\tau^x)$ top. Raum , $f \from X\to Y $ - stetig. Dann ist $f(x)$ zusammenhaengend
+\end{theorem}
+\end{document}
