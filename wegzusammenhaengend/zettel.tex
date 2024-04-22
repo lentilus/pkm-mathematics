@@ -19,6 +19,26 @@
     \begin{lemma}
     $X$ - wegzusammenhaengend $\implies $ $X$ - zusammenh"angend
     \end{lemma}
+    \begin{lemma}
+   Sei $U \subset \R^n$. Dann $U$-zusammenh"angend $\iff $ $U$ wegzusammenhaengend
+    \end{lemma}
+    \begin{proof}
+        \begin{enumerate}
+            \item $\impliedby $ : - Folgt aus vorherigem Lemma.
+            \item $\implies $ : Sei $x \in  U$-und $U_1 =\set{y \in  U}{\tx{ $x$-und $y$-kann man mit stetiger Kurve verbinden } }$ $U_1 \neq \emptyset $-, weil $x \in  U$-(konstante Kurve). $U_1$ ist offen. Tats"achlich sei $y \in  U_1$. Dann $\exists \varepsilon > 0 \tx{s.d.} B_{\varepsilon}(y) \subset  U$. Dann ist $B_{\varepsilon}(y) \subset  U_1$-weil $\forall y' \in  B_{\varepsilon}(y) \bar{y} = \begin{cases}
+                    y (2t) & t \in  [0,\frac{1}{2}]\\
+                    y + (2t-1)(y'-y) & t \in  [\frac{1}{2},1]
+            \end{cases}$\\
+
+            $U \setminus U_1$ ist auch offen. Beweis: Sei $z \in  U \setminus  U_1 $, dann $\exists >0 \tx{s.d.} B_{\varepsilon}(z) \subset  U$. Ist $B_{\varepsilon}(z) \cap  U_1 \neq  \emptyset $, dann $\exists  z' \in  B_{\varepsilon}(z), z' \in  U_1$, so verbindet $y$ $x$ und $z$-und dann verbindet $\bar{\bar{y}} = \begin{cases}
+                y(2t) & t \in [0,\frac{1}{2}]\\
+                z'+(2t-1)(z-z') & t \in  [\frac{1}{2}, 1]
+            \end{cases}$\\
+        
+            $\implies B_{\varepsilon}(z) \subset U \setminus U_1$ und $U \setminus U_1$ ist offen. $\implies $ $U = U_1 \cup (U \setminus  U_1)$ . Da $U$ zusammenh"angend und $U \neq  \emptyset $, so ist $U \setminus U_1 = \emptyset $ , also $U = U_1 \implies U$ ist wegzusammenhaengend.
+
+        \end{enumerate}
+    \end{proof}
 \end{zettel}
 \end{document}
 
