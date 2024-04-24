@@ -6,7 +6,7 @@
 \begin{document}
 \begin{zettel}{Kompaktheit}
 \begin{definition}[Kompaktheit (Heine Borelsche Eigenschaft)]
-    Eine Teilmenge $K \subset  X$ hei"st kompakt, falls $\forall $ offene "Uberdeckung $\mathcal{U} =\set{U_{\alpha}\in  \tau}{\alpha \in I}$ von $K$ 
+    Sei $X$-top Raum. Eine Teilmenge $K \subset  X$ hei"st kompakt, falls $\forall $ offene "Uberdeckung $\mathcal{U} =\set{U_{\alpha}\in  \tau}{\alpha \in I}$ von $K$ 
 \[
     K = \bigcup_{\alpha \in  I} U_\alpha
 .\]
@@ -29,6 +29,36 @@ $K$ - kompakt $\iff  $  $K$ abgeschlossen und f"ur jede Folge $(x_n )$ sd $\set{
     Unter Verwendung Lebequescher Zahl.
 \end{proof}
 \end{theorem}
+    \begin{theorem}
+    $(V,\tau)$-top Raum
+    \begin{enumerate}
+        \item K-kompakte, Abgeschlossene Teilmengen von $X$ $\implies $ $K \cup A$ kompakt. 
+        \item kompakte Teilmengen, Hausdorffsche top R"aume sind abgeschlossen.
+    \item $\prod_{i=1}^n [a_n,b_i] = \set{x \in  \R ^{n}}{ a_i \leq x_i \leq  b_i, i=1,\dots,n}$ ist kompakt. (Quader in $n$ Dimensionen)
+    \item $M \subset  \R ^n$ ist kompakt $\iff $ $M$ abgeschlossen und beschr"ankt.
+    \end{enumerate}
+    \end{theorem}
 
+    \begin{remark}
+    Da metr. R"aume hausdorffsch, gilt 2. f"ur alle metr R"aume
+    \end{remark}
+    \begin{proof}
+        $1$ bis $4$ in VL bewiesen.
+        \begin{enumerate}
+            \item Sei $\mathcal{U} = \set{U_{\alpha}}{\alpha \in  I}$-offene "Uberdeckung von $A \cap K$. Dann ist $\mathcal{U_{1}}= \mathcal{U}\cup \set{X \setminus  A}$-offene "Uberdeckung von $K$. Da $K$-tkompakt, so gilt es eine endliche Teil"uberdeckung von $\mathcal{U}'$. ObdA $U_{\alpha_1}, \dots, U_{\alpha_n}, $  $,X \setminus A$ von $K: K \subset  U_{\alpha} \cup \dots \cup U_{\alpha_{n}} \cup X \setminus A$. Dann aber $K \cap  A \subset U_{\alpha_{1}} \cup  \dots \cup \dots$-d.h. $\mathcal{U}$-besitzt eine endliche Teil"uberdeckung von $K \cap  A$-und so ist $K \cap  A $ kompakt.
+            \item (nicht mitgeschrieben)
+            \item Bewiesen in $1$ dim im ersten Semester. $[a,b]  \subset \R $ ist kompakt. Dies basiert auf:
+$I_1 \supset I_2 \supset  \dots \supset I_k \tx{ Familie abgeschlossener Intervalle } $. Dann ist 
+    $\bigcap_{k=1}^{\infty} I_k \neq  \emptyset \tx{ dh }  \exists x \in  \bigcap_{k=1}^{\infty} I_k \quad (\tx{ zB. } x =\sup(\min I_k))$
+
+"Ahnlich f"ur eine Form geschachtelter Quader
+\[
+Q_1 \supset Q_2 \supset \dots Q_n
+.\]\\
+    $\quad\vdots$ \\
+(nicht zuende geschrieben)
+
+        \end{enumerate}
+    \end{proof}
 \end{zettel}
 \end{document}
