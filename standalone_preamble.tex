@@ -8,6 +8,10 @@
 \usepackage{mathdots}
 \usepackage{enumitem}
 \usepackage{comment}
+\usepackage{etoolbox}
+
+\usepackage{currfile}
+\usepackage{subfiles}
 
 % frames
 \usepackage[linewidth=1pt]{mdframed}
@@ -90,9 +94,8 @@
     \end{mdframed}
 }
 \newcommand{\inkfig}[1]{%
-    \begin{figure}[ht]
-        \centering
-        \def\svgwidth{\columnwidth}
-        \import{./figures/}{#1.pdf_tex}
-    \end{figure}
+    % we cant use figure here because of boxes...
+    \centering
+    \def\svgwidth{\columnwidth}
+    \import{\currfiledir figures}{#1.pdf_tex}
 }
