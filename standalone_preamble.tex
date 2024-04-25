@@ -19,6 +19,7 @@
 \usepackage{import}
 \usepackage{xifthen}
 \usepackage{pdfpages}
+\usepackage{transparent}
 
 % amsthm config
 \declaretheoremstyle[notebraces={[}{]},headpunct=\newline,]{custom}
@@ -42,6 +43,7 @@
 \newcommand{\K}{\mathbb{K}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
 
 % math operators
 \DeclareMathOperator{\Mat}{Mat}
@@ -86,4 +88,11 @@
 }
 {
     \end{mdframed}
+}
+\newcommand{\inkfig}[1]{%
+    \begin{figure}[ht]
+        \centering
+        \def\svgwidth{\columnwidth}
+        \import{./figures/}{#1.pdf_tex}
+    \end{figure}
 }
