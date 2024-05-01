@@ -1,0 +1,37 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{orthogonal}
+\begin{flashcard}
+    \begin{definition}[orthogonal / Orthogonalbasis]
+    \begin{align*}
+        v \perp w &\iff  \langle v,w\rangle =0\\
+        U \perp W &\iff  u \perp w \quad \forall u \in  U, w \in  W\\
+        (v_1,\dots,v_n)  \tx{ Orthogonalbasis } &\iff  \langle v_i,v_{j\rangle}= \delta_{i j} = \begin{cases}
+            1 & i=j\\
+            0 & sonst
+        \end{cases}
+    \end{align*}
+    \end{definition}
+\end{flashcard}
+
+\begin{corollary}
+Falls $\dim V < + \infty \implies \exists \tx{ ONB von } V$
+\end{corollary}
+
+\begin{corollary}
+Falls $\dim V < + \infty \forall W \leq V : V = W \oplus W^{\perp}$
+\end{corollary}
+
+% TODO
+
+to be finished:
+\inkfig{Orthogonalbasis}
+
+\end{zettel}
+\end{document}
+
+
