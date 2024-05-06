@@ -1,0 +1,29 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Differenzierbarkeit}
+\begin{flashcard}
+    \begin{definition}[differenzierbar]
+        Sei $U \subset  V$ eine offene Teilmenge. $(V,\norm{.}_V), (W,\norm{.})$ sind endlich dimensionale normierte $K$-Vektorr"aume. $f \from U\to W$-hei"st diffbar an $a \in  U \subset  V$, falls $\exists  K$-lineare Abbildung $L \from V\to W$-mit $h \mapsto L (h)$ sodass
+\[
+    \lim_{h \to 0} \frac{ \norm{f (a+h)- f (a)- L (h)}}{ \norm{h}} =0
+.\]
+
+Das hei"st $\forall\varepsilon>0 \exists\delta>0$, sodass $\forall h \in V$ mit $\norm{h}_V < \delta$ gilt
+\[
+ \norm{ f (a +h) - f (a)- L (h)}_W < \varepsilon \cdot  \norm{h}_V
+.\]
+
+$D_a := L $ ist das totale Differenzial von $f$  an $a \in  U$ 
+\end{definition}
+
+% TODO siehe Mitschriften 
+
+\end{flashcard}
+\end{zettel}
+\end{document}
+
+

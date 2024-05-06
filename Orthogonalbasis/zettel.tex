@@ -4,8 +4,11 @@
 \input{../standalone_preamble.tex}
 
 \begin{document}
-\begin{zettel}{Orthogonalbasis}
+\begin{zettel}{Orthogonalbasis (ONB)}
 \begin{flashcard}
+\begin{question}
+Wie konstruiert man eine Orthogonalbasis?
+\end{question}
     Orthogonalbasis bauen
     \begin{align*}
         v_1' &:= \frac{v_1'}{ \norm{v_1}}\\
@@ -13,8 +16,14 @@
     \end{align*}
 
     % TODO siehe Skript
-
 \end{flashcard}
+$B$ ONB von $V$ , $F \in  \End(V)$ 
+\begin{theorem}
+\[
+F \tx{ Isometrie } \iff  \tx{ Spalten von } M_B^B (F) \tx{ sind eine ONB von } (\mathbb{K}^n, \langle .\rangle_{std})
+.\]
+\end{theorem}
+
 \end{zettel}
 \end{document}
 

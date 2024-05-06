@@ -1,4 +1,3 @@
-% basics
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -54,8 +53,10 @@
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Eig}{Eig}
 \DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Isom}{Isom}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Vol}{Vol}
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\HP}{HP}
 \DeclareMathOperator{\rand}{rand}
@@ -94,9 +95,13 @@
 {
     \end{mdframed}
 }
-\newcommand{\inkfig}[1]{%
-    % we cant use figure here because of boxes...
-    \centering
-    \def\svgwidth{\columnwidth}
-    \import{\currfiledir figures}{#1.pdf_tex}
+
+% no idea about the curly brace warning here...
+\newcommand{\inkfig}[1]{
+    \begingroup\centering%
+    \def\svgwidth{\columnwidth}%
+    \import{\currfiledir figures}{#1.pdf_tex}%
+    \endgroup%
 }
+
+
