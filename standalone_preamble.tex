@@ -80,8 +80,12 @@
 \makeatother
 \newcommand{\norm}[1]{\left|\left|#1\right|\right|}
 
-\newenvironment{flashcard}{}{}
-\newenvironment{question}{\paragraph{Question}}{\vspace{5pt}}
+\newenvironment{flashcard}{
+    \begin{mdframed}[backgroundcolor=black!15,rightline=false,topline=false,bottomline=false,leftline=false]
+}{
+    \end{mdframed}
+}
+\newenvironment{question}{\par\itshape}{\par}
 \newenvironment{zettel}[1]
 {
     \begin{mdframed}[%
