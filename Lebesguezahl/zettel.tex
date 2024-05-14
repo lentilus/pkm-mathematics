@@ -1,0 +1,19 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Lebesgue-Zahl}
+\begin{flashcard}
+\begin{definition}[Lebequesche Zahl]
+$(X,d)$ - kompakter metrischer Raum,
+$\set{ U_{\alpha}  }_{\alpha \in  I}$ - offene "Uberdeckung von $A \subset X$ 
+\[
+    \implies \exists \varepsilon > 0 \forall x \in  A \exists \alpha \in  I \text{ mit } B_{\varepsilon }(x) \subset U_{\alpha }
+.\]
+iaW: Es gibt ein $\varepsilon$, sodass der $\varepsilon$ -Ball  jedes Elements Teilmenge irgendeiner "Uberdeckungsmenge ist. Wir nennen $\varepsilon $ die Lebesgue Zahl. Das hei"st, jedes $\varepsilon \leq \varepsilon'$ ist ebenfalls eine Lebesgue-Zahl
+\end{definition}
+\end{flashcard}
+\end{zettel}
+\end{document}

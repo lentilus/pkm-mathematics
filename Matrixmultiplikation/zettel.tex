@@ -1,0 +1,30 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Matrixmultiplikation}
+    Seien $A \in \Mat(m \times n; \K), B \in  \Mat( n \times  k; \K) $ 
+\[
+ \begin{pmatrix}
+ a_1 \\
+ \vdots \\
+ a_m \\
+ \end{pmatrix},
+ B = \begin{pmatrix}
+ b_2 & \dots &  b_k \\
+ \end{pmatrix}
+ \quad a_i,b_j \in   \K^n
+.\]
+
+Dann ist
+\[
+A \cdot  \bar{B} = \left(\langle a_i,b_j\rangle \right)
+.\]
+
+Wir definieren $\bar{A} := A$ falls $\K  = \R $ 
+\end{zettel}
+\end{document}
+
+
