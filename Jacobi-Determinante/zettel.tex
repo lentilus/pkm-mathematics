@@ -1,0 +1,21 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Jacobi-Determinante}
+\begin{flashcard}
+	\begin{definition}[Jacobi-Determinante]
+		Die Determinante der Jacobi-Matrix.
+	\end{definition}
+	\[
+		\det(J_A) = \sum_{\sigma \in  S_n } \sgn(\sigma) \prod_{i = 1}^{n} \frac{\partial f_i}{\partial x_{\sigma(i)}}
+	.\]
+\end{flashcard}
+\begin{remark}
+	$D_a f$ ist invertierbar falls $\det(J_a) \neq 0$ .
+\end{remark}
+\end{zettel}
+\end{document}
+

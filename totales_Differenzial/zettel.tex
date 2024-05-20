@@ -6,36 +6,39 @@
 \begin{document}
 \begin{zettel}{totales Differenzial}
 \begin{flashcard}
-\begin{question}
-totales Diffenrezial
-\end{question}
-\begin{definition}[Differenzierbarkeit mit totalem Differenzial]
-        Sei $U \subset  V$ eine offene Teilmenge. $(V,\norm{.}_V), (W,\norm{.})$ sind endlich dimensionale normierte $K$-Vektorr"aume. $f \from U\to W$-hei"st diffbar an $a \in  U \subset  V$, falls $\exists  K$-lineare Abbildung $L \from V\to W$-mit $h \mapsto L (h)$ sodass
-\[
-    \lim_{h \to 0} \frac{ \norm{f (a+h)- f (a)- L (h)}}{ \norm{h}} =0
-.\]
+	\begin{question}
+		totales Diffenrezial
+	\end{question}
+	\begin{definition}[Differenzierbarkeit mit totalem Differenzial]
+		Sei $U \subset  V$ eine offene Teilmenge. $(V,\norm{.}_V), (W,\norm{.})$ sind endlich dimensionale normierte $K$-Vektorr"aume. $f \from U\to W$-hei"st diffbar an $a \in  U \subset  V$, falls $\exists  K$-lineare Abbildung $L \from V\to W$-mit $h \mapsto L (h)$ sodass
+		\[
+			\lim_{h \to 0} \frac{ \norm{f (a+h)- f (a)- L (h)}}{ \norm{h}} =0
+		.\]
 
-Das hei"st $\forall\varepsilon>0 \exists\delta>0$, sodass $\forall h \in V$ mit $\norm{h}_V < \delta$ gilt
-\[
- \norm{ f (a +h) - f (a)- L (h)}_W < \varepsilon \cdot  \norm{h}_V
-.\]
+		Das hei"st $\forall\varepsilon>0 \exists\delta>0$, sodass $\forall h \in V$ mit $\norm{h}_V < \delta$ gilt
+		\[
+			\norm{ f (a +h) - f (a)- L (h)}_W < \varepsilon \cdot  \norm{h}_V
+		.\]
 
-$D_a := L $ ist das totale Differenzial von $f$  an $a \in  U$ 
-\end{definition}
+		$D_a := L $ ist das totale Differenzial von $f$  an $a \in  U$
+	\end{definition}
 \end{flashcard}
 
 \begin{remark}
-Ist $f$ diffbar, so ist das Totaldifferenzial eindeutig.
+	Ist $f$ diffbar, so ist das Totaldifferenzial eindeutig.
 \end{remark}
 
 \begin{remark}
-\begin{enumerate}
-    \item Man kann Differenzierbarkeit auch f"ur $\infty$ dimensionale normirte Vektorr"aume definieren. Da nicht alle linearen Abbildungen zwischen $\infty$ dimensionalen Vektorr"aumen stetig sind, muss dies zus"atzlich verlangt werden.
-    \item $K$-Linearit"at ist wichtig. Beispielsweise ist $f: \C \to \R^2, z \mapsto \bar{z}$ $\R $ linear, allerdings nicht $\C $-linear
-\end{enumerate}
+	Das Totaldifferenzial einer linearen Abbildung ist die Abbildung selbst.
+\end{remark}
+
+\begin{remark}
+	\begin{enumerate}
+		\item Man kann Differenzierbarkeit auch f"ur $\infty$ dimensionale normirte Vektorr"aume definieren. Da nicht alle linearen Abbildungen zwischen $\infty$ dimensionalen Vektorr"aumen stetig sind, muss dies zus"atzlich verlangt werden.
+		\item $K$-Linearit"at ist wichtig. Beispielsweise ist $f: \C \to \R^2, z \mapsto \bar{z}$ $\R $ linear, allerdings nicht $\C $-linear
+	\end{enumerate}
 \end{remark}
 
 \end{zettel}
 \end{document}
-
 

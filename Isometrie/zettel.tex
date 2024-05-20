@@ -6,90 +6,106 @@
 \begin{document}
 \begin{zettel}{Isometrie}
 
-    Isometrien erhalten (in Anf"uhrungszeichen) alles was uns geometrisch interessiert.
+Isometrien erhalten (in Anf"uhrungszeichen) alles was uns geometrisch interessiert.
 \begin{flashcard}
-    \begin{question}
-    Was ist die Defintion einer Isometrie (mit Metrik)
-    \end{question}
-    \begin{definition}[Isometrie mit Metrik]
-        \[
-            F: (X,d_X) \longrightarrow (Y, d_Y)   \tx{ heisst Isometrie, falls } d_Y(f(x), f(y)) = d_X (x,y) \forall x,y
-        .\]
-    \end{definition}
+	\begin{question}
+		Was ist die Defintion einer Isometrie (mit Metrik)
+	\end{question}
+	\begin{definition}[Isometrie mit Metrik]
+		\[
+			F: (X,d_X) \longrightarrow (Y, d_Y)   \tx{ heisst Isometrie, falls } d_Y(f(x), f(y)) = d_X (x,y) \forall x,y
+		.\]
+	\end{definition}
 \end{flashcard}
 
 \begin{flashcard}
-    \begin{question}
-    Was ist die Defintion einer Isometrie (mit Skalarprodukt)
-    \end{question}
-    \begin{definition}[Isometrie mit Skalarprodukt]
-        $(V_1, \langle .\rangle_1 ) \cdot  (V_2, \langle .\rangle_2) \quad \mathbb{K}\tx{-R"aume}$  
-        Eine Isometrie ist eine bijektive lineare Abbildung: $F: V_1 \to V_2$ , sodass $ \langle F(v),F(v')\rangle_2 = \langle v,v'\rangle_1$ $\forall v,v' \in  V_1$ 
-    \end{definition}
+	\begin{question}
+		Was ist die Defintion einer Isometrie (mit Skalarprodukt)
+	\end{question}
+	\begin{definition}[Isometrie mit Skalarprodukt]
+		$(V_1, \langle .\rangle_1 ) \cdot  (V_2, \langle .\rangle_2) \quad \mathbb{K}\tx{-R"aume}$
+		Eine Isometrie ist eine bijektive lineare Abbildung: $F: V_1 \to V_2$ , sodass $ \langle F(v),F(v')\rangle_2 = \langle v,v'\rangle_1$ $\forall v,v' \in  V_1$
+	\end{definition}
 \end{flashcard}
 
 $A \in  \Mat(n \times  k; \K)$ ist eine Isometrie
 \begin{itemize}
-    \item $\iff A^t \cdot  \bar{A} = E_n$ 
-    \item $\iff \bar{A}^t = A^{-1}$ 
-    \item $\iff $ Zeilen von $A$ sind eine ONB
+	\item $\iff A^t \cdot  \bar{A} = E_n$
+	\item $\iff \bar{A}^t = A^{-1}$
+	\item $\iff $ Zeilen von $A$ sind eine ONB
 \end{itemize}
 
 \begin{flashcard}
-\begin{question}
-$F$ ist eine lineare Isometrie $\iff$ \dots ?
-\end{question}
-\begin{lemma}["aquivalente Defintion]
-$F$-linear, $F: (V_1, \langle .\rangle_1) \to (V_2, \langle .\rangle_2)$ ist eine Isometrie $\iff F$ schickt ONB zu ONB.\\
-Das ist "aquivalent dazu, dass \emph{eine} Orthogonalbasis existiert, sodass $\dots$ 
-\end{lemma}
+	\begin{question}
+		$F$ ist eine lineare Isometrie $\iff$ \dots ?
+	\end{question}
+	\begin{lemma}["aquivalente Defintion]
+		$F$-linear, $F: (V_1, \langle .\rangle_1) \to (V_2, \langle .\rangle_2)$ ist eine Isometrie $\iff F$ schickt ONB zu ONB.\\
+		Das ist "aquivalent dazu, dass \emph{eine} Orthogonalbasis existiert, sodass $\dots$
+	\end{lemma}
 \end{flashcard}
 
 \begin{remark}
-$v,v' \in  V_1$ $F$ - Isometrie
-\begin{enumerate}
-    \item $ \norm{v}_1 = \norm{F(v)}_2$ 
-    \item $d_1 (v,v') = \norm{v-v'}_1 = \norm{F(v)-F(v')}_2 = d_2 (F(v),F(v'))$ 
-\end{enumerate}
+	$v,v' \in  V_1$ $F$ - Isometrie
+	\begin{enumerate}
+		\item $ \norm{v}_1 = \norm{F(v)}_2$
+		\item $d_1 (v,v') = \norm{v-v'}_1 = \norm{F(v)-F(v')}_2 = d_2 (F(v),F(v'))$
+	\end{enumerate}
 \end{remark}
 
 \begin{remark}
-\[
-    V_1 \stackrel{F}{\to} V_2 \stackrel{G}{\to} V_3
-.\]
-\begin{enumerate}
-    \item $G \circ  F$ ist eine Isometrie
-    \item $F^{-1}: V_2 \to  V_1$ ist eine Isometrie
-\end{enumerate}
-
+	\[
+		V_1 \stackrel{F}{\to} V_2 \stackrel{G}{\to} V_3
+	.\]
+	\begin{enumerate}
+		\item $G \circ  F$ ist eine Isometrie
+		\item $F^{-1}: V_2 \to  V_1$ ist eine Isometrie
+	\end{enumerate}
 \end{remark}
 
-% \begin{corollary}
-%     $\mathcal{B}$-Basis von V, 
-% \[
-%     \Phi_B : (\mathbb{K}^n, \langle.,.\rangle_{std})  \to (V, \langle .\rangle) \tx{ - Isometrie }  \iff \mathcal{B} \tx{ ist eine ONB} 
-% .\]
-% \end{corollary}
-
 \begin{corollary}
-$\dim V_1 = \dim V_2 \implies  (V_2, \langle .\rangle_1), (V_2, \langle .\rangle_2)$  sind isometrisch.
+	$\dim V_1 = \dim V_2 \implies  (V_2, \langle .\rangle_1), (V_2, \langle .\rangle_2)$  sind isometrisch.
 \end{corollary}
 
 \begin{theorem}[7.5]
-    Sei $\mathcal{B}$-eine ONB von $(V, \langle .\rangle_v)$ und $F \in  \End(V)$, dann ist folgendes "aquivalent
-    \begin{enumerate}
-        \item $F$ ist eine Isometrie
-        \item die Spalten von $M_B^B (F) $ sind eine ONB von $( \mathbb{K}^n, \langle .\rangle_{std})$ 
-    \end{enumerate}
+	Sei $\mathcal{B}$-eine ONB von $(V, \langle .\rangle_v)$ und $F \in  \End(V)$, dann ist folgendes "aquivalent
+	\begin{enumerate}
+		\item $F$ ist eine Isometrie
+		\item die Spalten von $M_B^B (F) $ sind eine ONB von $( \mathbb{K}^n, \langle .\rangle_{std})$
+	\end{enumerate}
 \end{theorem}
 
 \begin{corollary}
-Ist $\dim V =n \implies \Isom (V) \cong \begin{cases} O (n) & \mathbb{K} = \R \\ U (n) & \mathbb{K} = \C \end{cases} $ 
+	Ist $\dim V =n \implies \Isom (V) \cong \begin{cases} O (n) & \mathbb{K} = \R \\ U (n) & \mathbb{K} = \C \end{cases} $
 \end{corollary}
 
 \begin{corollary}
-$F \from V\to V$ eine Isometrie $\implies |\det F| =1$ 
+	$F \from V\to V$ eine Isometrie $\implies |\det F| =1$
 \end{corollary}
+
+\begin{theorem}
+	Sei $V$ euklidischer Raum, $F \in  \Isome(V)$  orthogonaler Endomorphismus. (dh Isometrie) $\implies \exists \mathcal{B} \tx{ ONB, sodass }$
+	\[
+		M_B^B(F) =
+		\begin{pmatrix}
+			1 &   &        &    &    &              &        &              \\
+			  & 1 &        &    &    &              &        &              \\
+			  &   & \ddots &    &    &              &        &              \\
+			  &   &        & -1 &    &              &        &              \\
+			  &   &        &    & -1 &              &        &              \\
+			  &   &        &    &    & R_{\alpha_1} &        &              \\
+			  &   &        &    &    &              & \ddots &              \\
+			  &   &        &    &    &              &        & R_{\alpha_n} \\
+		\end{pmatrix} \tx{ (Blockdiagonale) }
+	.\],
+	wobei $\alpha_i \in  (0,\bar{a})$
+\end{theorem}
+\begin{lemma}
+	\[
+		F \in \Isome(V) \tx{ mit }  \dim V \geq 1 \implies  \exists  U \leq  V \tx{ F-invertierbarer UVR } \tx{mit} 1 \leq \dim(U) \leq  2
+	.\]
+\end{lemma}
+
 \end{zettel}
 \end{document}
 

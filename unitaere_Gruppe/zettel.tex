@@ -4,13 +4,23 @@
 \input{../standalone_preamble.tex}
 
 \begin{document}
-\begin{zettel}{unitaere_Gruppe}
+\begin{zettel}{unitaere Gruppe}
 \begin{flashcard}
-\[
-    U (n) := \set{A \in  \GL(n \times n,\C )}{\tx{ unit"ar } }
-.\]
+	\[
+		U (n) := \set{A \in  \GL(n \times n,\C )}{\tx{ unit"ar } }
+	.\]
 \end{flashcard}
+\begin{corollary}
+	\[
+		A \in  U(n) \implies  \exists  T \in  U(n) \tx{ sodass } \underbrace{T^{-1}}_{ = \bar{T}^T} \cdot  A \cdot  T =
+		\begin{pmatrix}
+			\lambda_1 &        & 0           \\
+			          & \ddots &           & \\
+			0         &        & \lambda_n   \\
+		\end{pmatrix}
+	.\]
+	und $ |\lambda_i| = 1 \forall i$
+\end{corollary}
 \end{zettel}
 \end{document}
-
 

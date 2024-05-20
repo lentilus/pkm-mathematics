@@ -38,9 +38,6 @@
 \newtheorem*{remark}{Remark}
 
 % symbol shortcuts
-\newcommand{\zz}{\mathrm{Z\kern-.4em\raise-0.5ex\hbox{Z}}}
-\newcommand{\tx}[1]{\text{ #1 }}
-\newcommand{\from}{\colon}
 \newcommand{\La}{\mathcal{L}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\K}{\mathbb{K}}
@@ -53,7 +50,9 @@
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Eig}{Eig}
 \DeclareMathOperator{\Image}{Im}
-\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Iso}{Iso}
+\DeclareMathOperator{\Isom}{Iso} % legacy
+\DeclareMathOperator{\Isome}{Isom}
 \DeclareMathOperator{\Hom}{Hom}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\Vol}{Vol}
@@ -74,39 +73,43 @@
 \renewcommand{\bar}{\overline}
 
 \makeatletter
-    % nice way to write sets
-    \newcommand{\set}[1]{\@ifnextchar\bgroup {\left\{#1\filteredset} {\{#1\}} }
-    \newcommand{\filteredset}[1]{\ \setseperator \ #1 \right\}}
-    \newcommand{\setseperator}{\middle|}
+% nice way to write sets
+\newcommand{\set}[1]{\@ifnextchar\bgroup {\left\{#1\filteredset} {\{#1\}} }
+\newcommand{\filteredset}[1]{\ \setseperator \ #1 \right\}}
+\newcommand{\setseperator}{\middle|}
 \makeatother
-\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+
+\newcommand{\zz}{\mathrm{Z\kern-.4em\raise-0.5ex\hbox{Z}}}
+\newcommand{\tx}[1]{\text{ #1 }}
+\newcommand{\from}{\colon}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\constrain}[1]{_{\big{|_{#1}}}}
 
 \newenvironment{flashcard}{
-    \begin{mdframed}[backgroundcolor=black!15,rightline=false,topline=false,bottomline=false,leftline=false]
-}{
-    \end{mdframed}
+	\begin{mdframed}[backgroundcolor=black!15,rightline=false,topline=false,bottomline=false,leftline=false]
+		}{
+	\end{mdframed}
 }
 \newenvironment{question}{\par\itshape}{\par}
 \newenvironment{zettel}[1]
 {
-    \begin{mdframed}[%
-        nobreak=true,%
-        topline=false,%
-        bottomline=false,%
-        rightline=false%
-        ]
-    \section*{#1}
-}
-{
-    \end{mdframed}
+	\begin{mdframed}[%
+			nobreak=false,%
+			topline=false,%
+			bottomline=false,%
+			rightline=false%
+		]
+		\section*{#1}
+		}
+		{
+	\end{mdframed}
 }
 
 % no idea about the curly brace warning here...
 \newcommand{\inkfig}[1]{
-    \begingroup\centering%
-    \def\svgwidth{\columnwidth}%
-    \import{\currfiledir figures}{#1.pdf_tex}%
-    \endgroup%
+	\begingroup\centering%
+	\def\svgwidth{\columnwidth}%
+	\import{\currfiledir figures}{#1.pdf_tex}%
+	\endgroup%
 }
-
 

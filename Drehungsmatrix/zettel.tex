@@ -1,0 +1,32 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Drehungsmatrix}
+\begin{flashcard}
+	\begin{definition}
+		\[
+			R_{\alpha} :=
+			\begin{pmatrix}
+				\cos \alpha & -  \sin \alpha \\
+				\sin \alpha & \cos \alpha    \\
+			\end{pmatrix}
+		.\]
+	\end{definition}[Drehungsmatrix]
+\end{flashcard}
+
+\begin{remark}
+	\begin{align*}
+		\stackrel{\tx{ Definition } }{\implies} & \chi_{R_{\alpha}}(t) = ( \cos \alpha - t)^2 + \sin \alpha^2 = t^2 - 2t \cos \alpha +1 \\
+		\implies                                & \exists T \in  U(2) : \bar{T}^t R_{\alpha} T =
+		\begin{pmatrix}
+			e^{i\alpha} & 0            \\
+			0           & e^{-i\alpha} \\
+		\end{pmatrix}
+	\end{align*}
+\end{remark}
+\end{zettel}
+\end{document}
+
