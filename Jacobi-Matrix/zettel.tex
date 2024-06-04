@@ -5,41 +5,40 @@
 
 \begin{document}
 \begin{zettel}{Jacobi-Matrix}
-\begin{flashcard}
-    \begin{definition}[Jacobi-Matrix]
-        Die Matrix von paritellen Ableitungen ist.
-\[
-D_a f = \begin{pmatrix}
-D_a f_1 \\
- \vdots \\
-D_a f_m \\
-\end{pmatrix}
-=
-\begin{pmatrix}
-\partial_1 f_1 (a)       &  \dots  & \partial _n f_1 (a) \\
- \vdots &  \ddots &  \vdots &  \\
-\partial_1 f_m (a)       &  \dots  & \partial_n f_m (a) \\
-\end{pmatrix}
-.\]
+\begin{flashcard}[]{}
+	\begin{definition}[Jacobi-Matrix]
+		Die Matrix von paritellen Ableitungen ist.
+		\[
+			D_a f = \begin{pmatrix}
+				D_a f_1 \\
+				\vdots  \\
+				D_a f_m \\
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+				\partial_1 f_1 (a) & \dots  & \partial _n f_1 (a)   \\
+				\vdots             & \ddots & \vdots              & \\
+				\partial_1 f_m (a) & \dots  & \partial_n f_m (a)    \\
+			\end{pmatrix}
+		.\]
 
-Wir nennen sie Jacobi-Matrix. Es gilt
-\[
-D_a f (h)= 
-\begin{pmatrix}
-    \frac{ \partial f_{1}}{\partial x_1} (a) &  \dots  & \frac{ \partial f_{1}}{\partial x_n} (a) \\
- \vdots &  \ddots &  \vdots &  \\
-\frac{\partial f_{m}}{\partial x_1} (a)       &  \dots  & \frac{\partial f_{m}}{\partial x_n} (a) \\
-\end{pmatrix} \cdot 
-\begin{pmatrix}
-h_1 \\
-\vdots \\
-h_n \\
-\end{pmatrix}
-.\]
-\end{definition}
+		Wir nennen sie Jacobi-Matrix. Es gilt
+		\[
+			D_a f (h)=
+			\begin{pmatrix}
+				\frac{ \partial f_{1}}{\partial x_1} (a) & \dots  & \frac{ \partial f_{1}}{\partial x_n} (a)   \\
+				\vdots                                   & \ddots & \vdots                                   & \\
+				\frac{\partial f_{m}}{\partial x_1} (a)  & \dots  & \frac{\partial f_{m}}{\partial x_n} (a)    \\
+			\end{pmatrix} \cdot
+			\begin{pmatrix}
+				h_1    \\
+				\vdots \\
+				h_n    \\
+			\end{pmatrix}
+		.\]
+	\end{definition}
 
 \end{flashcard}
 \end{zettel}
 \end{document}
-
 

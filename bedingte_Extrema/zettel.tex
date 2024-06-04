@@ -1,0 +1,57 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{donno}
+\begin{flashcard}[xss36dea]{}
+	\begin{theorem}[Bedingte Extrema - BE]
+		Sei $f$ , $g$ wie oben (?) und $a \in  U$ - Extremum unter NB (gegeben und $g = 0$ ). Sei au"serdem. $D_a g : \R^n \to  \R^r$ - surjektiv. Dann
+		\[
+			\exists  \lambda_1,\dots,\lambda_r \in  \R \tx{s.d.} \grad(f)(a) = \sum_{i =1}^{r} \lambda_i \grad (g_i)(a)
+		.\]
+	\end{theorem}
+\end{flashcard}
+
+$ \forall  g : U \to  \R^r $ mit $ D_a g : \R^n \to  \R^r \tx{-surjektiv} \exists \tx{lokaler Diffeomorphismus, sodass} $
+\[
+	U \supset \underbrace{\hat{U}}_{\in  a} \stackrel{\phi}{\to} \R^n \tx{sd} g \circ  \phi = 0
+.\]
+\begin{remark}
+	Das ist das Gleiche wie die Suche f"ur Extrema von $f$ NB $g = 0$
+\end{remark}
+
+% \begin{definition}
+% 	$\R^n \supset  U \stackrel{\tilde{g}}{\to} \R^r \times \R^{n-r } = \R^n \quad \tilde{g } = 0$
+% 	\[
+% 		\tilde{g }(x)= \begin{pmatrix}
+% 			( g \circ A )(x) \\
+% 			x_r + 1          \\
+% 			\vdots           \\
+% 			x_n              \\
+% 		\end{pmatrix} \quad
+% 		D_o \tilde{g } = E_n
+% 	.\]
+% \end{definition}
+%
+% \begin{theorem}
+% 	$\exists $ lokale inverse $\tilde{g }^{-1}: \tilde{g } \cdot g^{m-1}(x) =
+% 		\begin{pmatrix}
+% 			x_1    \\
+% 			\vdots \\
+% 			x_n    \\
+% 		\end{pmatrix}
+% 		\implies (g \circ A \circ  \tilde{g }^{-1})(x) =
+% 		\begin{pmatrix}
+% 			x_1    \\
+% 			\vdots \\
+% 			x_r    \\
+% 		\end{pmatrix}
+% 	$
+%
+%     Dann 
+% \end{theorem}
+\end{zettel}
+\end{document}
+

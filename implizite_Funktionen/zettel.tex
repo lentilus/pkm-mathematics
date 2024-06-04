@@ -1,0 +1,33 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{implizite Funktionen}
+\begin{theorem}[implizite Funktionen]
+	\begin{flashcard}[j0p2atct]{}
+		Sei $U \subset \R^{n + k } $ offen und $f: U \to  \R^k $, sodass $f \in  \C^1 (U, \R ^k)$. Es ist
+		$\begin{pmatrix}
+				a \\
+				b \\
+			\end{pmatrix} \in  \R^{n + k }$, $a \in  \R^n, b \in  \R^k$ und sei $f (a,b ) = 0$. Es sei weiterhin.
+		\[
+			D_{(a,b)} f : \R^{n +k} \to \R ^k
+		\]
+		mit Matrix von partiellen Ableitungen $ \begin{pmatrix} A & B \\ \end{pmatrix}$.
+		wobei
+		\[
+			A = \left(\frac{\partial f_i}{\partial x_j} \right)_{i = 1, \dots k , j = 1 \dots n }, B = \left(\frac{\partial f_i}{\partial y_i} \right)_{i = 1 \dots k , j = 1 \dots n }
+		.\]
+		und $B$ invertierbar ist.\\
+		Dann existiert ein offenes $V \subset  \R^n$  und offenes $W \subset  \R^k$ mit $a \in  V, b \in  W $ und $g \in  \C^1 (V,\R^k )$ , sodass $g(a)= b $ und
+		\[
+			f (x,y ) = 0 \tx{f"ur} x \in  V, y \in  W \iff y = g(x) \tx{f"ur} x \in  V
+		.\]
+		Das impliziert $f (x,g(x) ) = 0 \quad \forall  x \in  V$
+	\end{flashcard}
+\end{theorem}
+\end{zettel}
+\end{document}
+

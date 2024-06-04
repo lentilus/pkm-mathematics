@@ -12,6 +12,8 @@
 \usepackage{currfile}
 \usepackage{subfiles}
 
+\usepackage{xparse} % expl3 stuff
+
 % frames
 \usepackage[linewidth=1pt]{mdframed}
 \usepackage{framed}
@@ -47,6 +49,9 @@
 
 % math operators
 \DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Rad}{Rad}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\Sym}{Sym}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\Eig}{Eig}
 \DeclareMathOperator{\Image}{Im}
@@ -60,24 +65,41 @@
 \DeclareMathOperator{\HP}{HP}
 \DeclareMathOperator{\rand}{rand}
 \DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\grad}{grad}
 
 % misc
 \setlength\parindent{0pt}
 \pagestyle{empty}
 
-% how I want stuff :)
+%%% Redefine existing commands
 \let\oldforall\forall
 \let\oldexists\exists
 \renewcommand{\forall}{\ \oldforall}
 \renewcommand{\exists}{\ \oldexists}
 \renewcommand{\bar}{\overline}
 
+%%% Macros
 \makeatletter
 % nice way to write sets
 \newcommand{\set}[1]{\@ifnextchar\bgroup {\left\{#1\filteredset} {\{#1\}} }
 \newcommand{\filteredset}[1]{\ \setseperator \ #1 \right\}}
 \newcommand{\setseperator}{\middle|}
+% derivatives
+\newcommand\del[1]{\@ifnextchar /
+{\@del{#1}}
+{\@del/{#1}}}
+\def\@del#1/#2{\frac{\partial #1}{\partial #2}}
 \makeatother
+
+\ExplSyntaxOn
+\clist_new:N \l_feq_vector_clist
+\NewDocumentCommand{\vect}{O{\\}mO{p}}{
+\clist_set:Nn \l_feq_vector_clist {#2} % Set the list
+\begin{#3matrix}
+\clist_use:Nn \l_feq_vector_clist {#1} % show it with separator from #1 (\\)
+\end{#3matrix}
+}
+\ExplSyntaxOff
 
 \newcommand{\zz}{\mathrm{Z\kern-.4em\raise-0.5ex\hbox{Z}}}
 \newcommand{\tx}[1]{\text{ #1 }}
@@ -85,11 +107,31 @@
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\constrain}[1]{_{\big{|_{#1}}}}
 
-\newenvironment{flashcard}{
-	\begin{mdframed}[backgroundcolor=black!15,rightline=false,topline=false,bottomline=false,leftline=false]
-		}{
+% \newenvironment{flashcard}{
+% 	\begin{mdframed}[%
+% 			backgroundcolor=black!15,%
+% 			rightline=false,%
+% 			topline=false,%
+% 			bottomline=true,%
+% 			leftline=false%
+% 		]
+% 		}{
+% 	\end{mdframed}
+% }
+\newenvironment{flashcard}[2][none]{
+	\begin{mdframed}[%
+			backgroundcolor=black!15,%
+			rightline=false,%
+			topline=false,%
+			bottomline=true,%
+			leftline=false%
+		]
+		#2 \hfill \itshape #1
+		}
+		{
 	\end{mdframed}
 }
+
 \newenvironment{question}{\par\itshape}{\par}
 \newenvironment{zettel}[1]
 {

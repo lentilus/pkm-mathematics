@@ -1,0 +1,29 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{orthogonales Komplement}
+\begin{flashcard}[nhl43zoj]{}
+	\begin{definition}[orthogonales Komplement]
+		Sei $V$ ein endlich dim. K-Vektorraum und $b: V \times V \to  K $ bilinear. Sei $X \subseteq V$
+		\[
+			X^{\perp} := \set{v \in  V}{b (w,v ) = 0 \quad \forall x \in  X}
+		.\]
+	\end{definition}
+
+\end{flashcard}
+
+\begin{remark}
+	Eigenschaften. (Beweis wie beim Skalarprodukt)
+	\begin{enumerate}
+		\item $X^{\perp} \leq V$ ist ein UVR
+		\item $X \subseteq Y \implies X^{\perp} \geq Y^\perp$
+		\item $X^{\perp}= \langle x\rangle^\perp$
+	\end{enumerate}
+\end{remark}
+
+\end{zettel}
+\end{document}
+

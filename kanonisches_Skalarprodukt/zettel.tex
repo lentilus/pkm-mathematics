@@ -5,22 +5,32 @@
 
 \begin{document}
 \begin{zettel}{kanonisches Skalarprodukt}
-\begin{flashcard}
-    \begin{definition}[Skalarprodukt]
-        das Kanonische Skalarprodukt auf $\mathbb{R}^n $  ist die Abbildung 
-        \begin{align*}
-            \langle .,.\rangle : \mathbb{R}^n \times \mathbb{R}^n  &\longrightarrow \mathbb{R}\\
-            \begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}, \begin{pmatrix}y_2\\ \vdots\\ y_n\end{pmatrix}  \mapsto \sum_{i = 1}^{k} x_i  y_i  = (x_1 , \dots , x_n ) \cdot \begin{pmatrix}y_1\\ \dots\\ y_n\end{pmatrix}  = \bar{y}^t \cdot \bar{y} 
-        \end{align*}
-    \end{definition}
+\begin{flashcard}[]{}
+	\begin{definition}[kanonisches Skalarprodukt $\R^n$ ]
+		das Kanonische Skalarprodukt auf $\mathbb{R}^n $  ist die Abbildung
+		\begin{align*}
+			\langle .,.\rangle : \mathbb{R}^n \times \mathbb{R}^n                                                                  & \longrightarrow \mathbb{R}                                                                                                                           \\
+			\begin{pmatrix}x_1\\ \vdots\\ x_n\end{pmatrix}, \begin{pmatrix}y_2\\ \vdots\\ y_n\end{pmatrix} & \mapsto \sum_{i = 1}^{k} x_i  y_i  = (x_1 , \dots , x_n ) \cdot \begin{pmatrix}y_1\\ \dots\\ y_n\end{pmatrix}  = \bar{y}^t \cdot \bar{y}
+		\end{align*}
+	\end{definition}
 \end{flashcard}
-\begin{enumerate}
-    \item $ \langle \bar{x},\bar{y}_1+\bar{y_2}\rangle  = \langle \bar{x},\bar{y_1}\rangle + \langle x_1,y_2\rangle $\\
-        $ \langle x,\lambda y \rangle = \lambda \langle x,y\rangle $
-            \item $ \langle x,y\rangle = \langle y,x\rangle $ 
-                \item $ \langle x,x\rangle \geq 0 $ und $ \langle x,x\rangle  = 0 \iff  x = 0 \in  \mathbb{R}^n$ 
-\end{enumerate}
+
+% \begin{enumerate}
+% 	\item $ \langle \bar{x},\bar{y}_1+\bar{y_2}\rangle  = \langle \bar{x},\bar{y_1}\rangle + \langle x_1,y_2\rangle $\\
+% 	      $ \langle x,\lambda y \rangle = \lambda \langle x,y\rangle $
+% 	\item $ \langle x,y\rangle = \langle y,x\rangle $
+% 	\item $ \langle x,x\rangle \geq 0 $ und $ \langle x,x\rangle  = 0 \iff  x = 0 \in  \mathbb{R}^n$
+% \end{enumerate}
+
+\begin{flashcard}[40po2j06]{}
+	\begin{definition}[kanonisches Skalarprodukt in Complexen VR]
+		siehe Skript vom 19.04
+		\[
+			\langle \cdot,\cdot\rangle : \mathbb{C} \times \mathbb{C} \longrightarrow  \mathbb{C}, \begin{pmatrix}v_1 \\ \vdots \\ v_n\end{pmatrix}, \begin{pmatrix}w_1 \\ \vdots \\ w_n\end{pmatrix} \mapsto \sum_{i = 1}^{n} v_i \bar{w_i}
+		.\]
+		Wo $ \bar{w_i} $ das komplex konjugierte von $w_i $ ist.
+	\end{definition}
+\end{flashcard}
 \end{zettel}
 \end{document}
-
 

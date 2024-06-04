@@ -1,0 +1,23 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Polynom}
+\begin{flashcard}[]{}
+	\begin{definition}[Polynom]
+		Polynome auf variablen "uber $K$ sind formelle endliche Summen
+		\[
+			p (  t_1,\dots,t_n ) = \sum \underbrace{c_{i_1 ,\dots, i_n} t_1^{i_{1}} \dots t_n^{i_n}}_\tx{Monome von Grad $i_1 + \dots + i_n$ } \tx{mit}  c_{i_1,\dots,i_n} \in  K
+		.\]
+	\end{definition}
+\end{flashcard}
+\begin{definition}[Grad eines Polynom]
+	\[
+		\deg(p) := \max \set{\tx{grad von nicht-null Monomen von p} }
+	.\]
+\end{definition}
+\end{zettel}
+\end{document}
+

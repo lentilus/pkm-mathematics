@@ -5,35 +5,34 @@
 
 \begin{document}
 \begin{zettel}{Untergruppe}
-\begin{flashcard}
-    \begin{definition}[Untergruppe]
-        $H \subset G$ ist eine Untergruppe falls
-    \begin{enumerate}
-        \item $H \neq \emptyset$ 
-        \item $\forall a,b \in  H \colon a \cdot b \in  H$ 
-        \item $\forall a \in  H \colon a^{-1} \in  H$ 
-    \end{enumerate}
-\end{definition}
+\begin{flashcard}[]{}
+	\begin{definition}[Untergruppe]
+		$H \subset G$ ist eine Untergruppe falls
+		\begin{enumerate}
+			\item $H \neq \emptyset$
+			\item $\forall a,b \in  H \colon a \cdot b \in  H$
+			\item $\forall a \in  H \colon a^{-1} \in  H$
+		\end{enumerate}
+	\end{definition}
 \end{flashcard}
 
+\begin{flashcard}[]{}
+	\begin{question}
+		Wie verhalten sich Bild, Urbild einer Untergruppe unter einem Homomorphismus?
+	\end{question}
+	\begin{theorem}[Untergruppe unter Homomorphismen]
+		Sei $\Phi: G \longrightarrow K$ Homomorphismus
+		\begin{itemize}
+			\item Wenn $H \leq  G$, dann ist auch $\Phi(H) \leq K$
+			\item Wenn $H' \leq  G$, dann ist auch $\Phi^{-1} (H') \leq G$
+			\item $\Phi$ ist injektiv $\iff \ker (\Phi) = \set{e}$
+		\end{itemize}
+		\[
+			\ker (\Phi) = \set{g \in  G}{\Phi(g) = e}
+		.\]
+		Bilder und Urbilder von von Untergruppen unter Homomorphismen sind Untergruppen.
 
-\begin{flashcard}
-\begin{question}
-    Wie verhalten sich Bild, Urbild einer Untergruppe unter einem Homomorphismus?
-\end{question}
-    \begin{theorem}[Untergruppe unter Homomorphismen]
-    Sei $\Phi: G \longrightarrow K$ Homomorphismus
-    \begin{itemize}
-        \item Wenn $H \leq  G$, dann ist auch $\Phi(H) \leq K$ 
-        \item Wenn $H' \leq  G$, dann ist auch $\Phi^{-1} (H') \leq G$ 
-        \item $\Phi$ ist injektiv $\iff \ker (\Phi) = \set{e}$ 
-    \end{itemize}
-\[
-    \ker (\Phi) = \set{g \in  G}{\Phi(g) = e}
-.\]
-    Bilder und Urbilder von von Untergruppen unter Homomorphismen sind Untergruppen.
-    
-\end{theorem}
+	\end{theorem}
 \end{flashcard}
 \end{zettel}
 \end{document}

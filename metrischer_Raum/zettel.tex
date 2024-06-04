@@ -5,31 +5,31 @@
 
 \begin{document}
 \begin{zettel}{metrischer Raum}
-\begin{flashcard}
-\begin{question}
-    Wie ist die Definition eines metr. Raumes?
-\end{question}
-\begin{definition}[metrischer Raum]
-    Sei $X$ - Menge, $d:X \times X \longrightarrow \R$ - Metrik. Wir nennen $(X,d)$ metrischen Raum, wenn $\forall x,y,z \in X$ 
-    \begin{enumerate}
-        \item (Positive Definitheit) $d(x,y) \geq 0$ und $d(x,y)= 0 \implies x = y$ 
-        \item (Symmetrie) $d(x,y) = d(y,x)$ 
-        \item (Dreiecksunglecihung) $d(x,y) + d(y,z) \geq d(x,z)$ 
-    \end{enumerate}
-\end{definition}
+\begin{flashcard}[]{}
+	\begin{question}
+		Wie ist die Definition eines metr. Raumes?
+	\end{question}
+	\begin{definition}[metrischer Raum]
+		Sei $X$ - Menge, $d:X \times X \longrightarrow \R$ - Metrik. Wir nennen $(X,d)$ metrischen Raum, wenn $\forall x,y,z \in X$
+		\begin{enumerate}
+			\item (Positive Definitheit) $d(x,y) \geq 0$ und $d(x,y)= 0 \implies x = y$
+			\item (Symmetrie) $d(x,y) = d(y,x)$
+			\item (Dreiecksunglecihung) $d(x,y) + d(y,z) \geq d(x,z)$
+		\end{enumerate}
+	\end{definition}
 \end{flashcard}
 
 \begin{example}[Metriken]
-Seien $ (X,d_X) , (Y,d_Y)  $ - metr. R"aume
-\begin{itemize}
-    \item $d_E ( (x_1,x_2) , (x_2,y_2)) := \sqrt{d_x (x_1,x_2)^2 + d_y (y_1,y_2)^2  }$ 
-    \item $d_{max} (\dots\ \dots) := max \set{ d_X (x_1,x_2) , d_Y  (y_1,y_2) }$
-    \item $d_{sum} (\dots\ \dots):= d_X (x_1,x_2) +  d_Y (y_1,y_2) $
-\end{itemize}
-\end{example}    
+	Seien $ (X,d_X) , (Y,d_Y)  $ - metr. R"aume
+	\begin{itemize}
+		\item $d_E ( (x_1,x_2) , (x_2,y_2)) := \sqrt{d_x (x_1,x_2)^2 + d_y (y_1,y_2)^2  }$
+		\item $d_{max} (\dots\ \dots) := max \set{ d_X (x_1,x_2) , d_Y  (y_1,y_2) }$
+		\item $d_{sum} (\dots\ \dots):= d_X (x_1,x_2) +  d_Y (y_1,y_2) $
+	\end{itemize}
+\end{example}
 
 \begin{theorem}
-   $(X,d)$ ein metr. Raum, so gilt $\forall a \in  \bar{Y} \exists $ Folge $(y_n )$ in $Y$ sd $\lim_{n \to \infty} y_n = a$ 
+	$(X,d)$ ein metr. Raum, so gilt $\forall a \in  \bar{Y} \exists $ Folge $(y_n )$ in $Y$ sd $\lim_{n \to \infty} y_n = a$
 \end{theorem}
 
 \end{zettel}
