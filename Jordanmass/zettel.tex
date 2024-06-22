@@ -1,0 +1,32 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Jordanmass}
+\begin{definition}[Jordanmass]
+	Sei $A \subset \R^n$ beschr"ankt. Definiere a"u"seres Jordanma"s
+	\[
+		\bar{m}(A):= \inf \set{m of E}{A \subset  E}
+	.\]
+	und inneres Jordanma"s
+	\[
+		\underline{m }(A):= \sup \set{m(E)}{E \subset  A}
+	.\]
+	$A$ - jordanmessbar $\iff \underline{m}(A) = \bar{m}(A)$.
+
+	Jordanma"s $m^J(A) := \bar{m }(A)= \underline{m }(A)$
+\end{definition}
+
+\begin{lemma}[Jordan-Messbarkeit]
+	\begin{align*}
+		A \tx{Jordan- messbar} & \iff \forall\varepsilon>0 \exists \tx{elementare} E_1, E_2 : E_1 \subset  A \subset E_2 \tx{mit}  m(E_2 \setminus  E_1) < \varepsilon \\
+		                       & \iff \forall\varepsilon>0 \exists E \tx{- elementar} : \bar{m}( A \triangle E ) < \varepsilon                                         \\
+		                       & \iff \bar{m}(A)= \underline{m }(A)
+	\end{align*}
+\end{lemma}
+
+\end{zettel}
+\end{document}
+

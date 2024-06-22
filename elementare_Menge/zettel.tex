@@ -1,0 +1,43 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{elementare Menge}
+\begin{flashcard}[fbnseont]{elementare Menge}
+	\begin{definition}
+		Eine Elementare Menge $E$ ist eine Menge von der Form
+		\[
+			E = \bigcup_{s = 1}^k Q_s
+		.\]
+		Wobei $Q_s$ ein Quader ist.
+	\end{definition}
+\end{flashcard}
+
+\begin{lemma}[Eigenschaften elementarer Mengen]
+	Seien $E$ , $F \subset  \R ^n$ elementar.
+	\begin{enumerate}
+		\item $E \cup  F, E \cap F, E \setminus F, E \triangle F$ sind Elementar.
+		\item $\forall x \in  \R^n $ ist $x + E := \set{x + y}{y \in  E}$ elementar.
+		\item Alle elementaren $E \subset  \R^n $ sind von der Form $E = \bigsqcup_{s = 1 }^m Q_s$
+		\item Falls $\bigsqcup_{s = 1 }^{m'} Q'_s = E = \bigsqcup_{s = 1 }^{m'} Q'_s \implies \sum_{s = 1}^{m'} | Q_s|_n = \sum_{s = 1}^{m} | Q_s|_n$
+		\item $m(E) \geq 0, m(\emptyset) = 0$
+		\item $m (E \sqcup F) = m(E) + m(F)$
+		\item $m(Q) = |Q|$
+		\item $E \subset F \implies  m(E) \leq  m(F)$
+		\item $ m (E \cup  F) \leq  m(E)+ m(F)$
+		\item $m ( x + E) = m(E)$
+		\item $E_i \subset \R^n , i = 1,2$ elementare Mengen $\implies m_{n1 + n_2}(E_1 \times  E_2) = m_{ n_1 }(E_1) \cdot  m_{n_2} $
+	\end{enumerate}
+\end{lemma}
+
+\begin{corollary}
+	Elementare Mengen sind Jordanmessbar.
+	\[
+		m^J(E)= m(E)
+	.\]
+\end{corollary}
+\end{zettel}
+\end{document}
+
