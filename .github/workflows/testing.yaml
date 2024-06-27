@@ -16,7 +16,7 @@ jobs:
                     - /dev/shm:/dev/shm
 
         steps:
-            - run: sleep 10
+            - run: sleep 60
             - uses: actions/checkout@v4
             - run: |
                 NAME="$(basename ${{ github.repository }})" && echo $NAME && cp -r . "/$NAME" && echo "ZETTEL_DATA=/$NAME">/xk/config
