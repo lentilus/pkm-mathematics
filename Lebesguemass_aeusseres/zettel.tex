@@ -1,0 +1,28 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{"au"seres Lebesguema"s}
+\begin{flashcard}[cvit2hk5]{"au"seres Lebesguema"s}
+	\begin{definition}["au"seres Lebesguema"s]
+		Sei $A \subset \R^n$
+		\[
+			\hat{\mu }(A) := \inf \set{\sum_{i = 1}^{\infty} |Q_i |}{A \subset  \bigsqcup_{i=1}^{\infty} Q_i} = \inf \set{\sum_{i = 1}^{\infty} |Q_i |}{A \subset  \bigcup_i^{\infty} Q_i}
+		.\]
+		Wobei $\hat{\mu }(A) \in  [0, \infty) \cup \set{\infty} = [0,\infty]$
+	\end{definition}
+	Eine "aquivalente Definition ist die Verwendug offener Quader.
+\end{flashcard}
+
+Eigenschaften
+\begin{enumerate}
+	\item $A \subset  B \implies \hat{\mu }(A) \leq  \hat{\mu }(B)$
+	\item $\hat{\mu }(\bigcup_i^{\infty}A_i ) \leq  \sum_{i = 1}^{\infty} \hat{\mu }(A_i) $
+	\item $\hat{\mu }(x + A) = \hat{\mu }(A)$
+	\item $E$ beliebig, elementar $\implies \hat{\mu }(E)= m(E)$ ?
+\end{enumerate}
+\end{zettel}
+\end{document}
+

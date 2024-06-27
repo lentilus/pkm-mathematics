@@ -1,0 +1,26 @@
+name: Testing Actions
+on: [push]
+jobs:
+    SomeJob:
+        runs-on: ubuntu-latest
+        container: lentilus/xk
+
+        services:
+            anki:
+                image: lentilus/anki-connect
+                env:
+                    ANKI_PREFS: ${{ secrets.ANKI_PREFS }}
+                ports:
+                    - 8765:8765
+                volumes:
+                    - /dev/shm:/dev/shm
+
+        steps:
+            - run: sleep 10
+            - uses: actions/checkout@v4
+            - run: |
+                NAME="$(basename ${{ github.repository }})" && echo $NAME && cp -r . "/$NAME" && echo "ZETTEL_DATA=/$NAME">/xk/config
+            - run: apk add curl
+            - run: xk script importflashcards
+            - run: "curl anki:8765 -X POST -d \'{\"action\": \"sync\", \"version\": 6}\'"
+            - run: "sleep 10"

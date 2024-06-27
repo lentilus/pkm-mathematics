@@ -1,0 +1,34 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Additivit"at Lebesguemass}
+\begin{flashcard}[optb78jp]{Additivit"at Lebesguemass}
+	\begin{lemma}[Additivit"at Lebesguemass]
+		$ M_1,\dots,M_n \subset \R^n$ l-messbar, dann
+		\begin{enumerate}
+			\item unklar ?
+			\item $ \mu (\bigsqcup_{i = 1}^k M_i) = \sum_{i=1}^{k} \mu(M_i)$
+		\end{enumerate}
+
+		$M_k , k \in \N $ l-messbar, dann ist\\
+		$
+			M = \bigsqcup_{k = 1 }^{\infty} M_k \tx{l-messbar} , \mu(M) = \sum_{k = 1}^{\infty} \mu(M_k)
+		$
+	\end{lemma}
+\end{flashcard}
+
+\begin{flashcard}[nu3n7eh5]{Differenz Lebesguemass}
+	\begin{lemma}[Differenz l-messbare Mengen]
+		$A \subset  B$ , $A$ , $B$ l-messbar $\implies$
+		\[
+			B \setminus A = B \cap  A^C \tx{l-messbar}
+		.\]
+	\end{lemma}
+\end{flashcard}
+
+\end{zettel}
+\end{document}
+

@@ -5,7 +5,29 @@
 
 \begin{document}
 \begin{zettel}{Lebesguemass}
-%TODO
+\begin{flashcard}[46lf8shd]{Lebesguemessbarkeit}
+	\begin{theorem}[sauberer Schnitt]
+		$M \subset  \R^n$ ist Lebesgue-messbar, falls $\forall A \subset \R^n:$
+		\[
+			\hat{\mu }(A)= \hat{\mu }(A \cap M) + \hat{\mu } (A \cap  M^C)
+		.\]
+		Das Lebesguemass ist dann $\mu(M) := \hat{\mu }(M)$
+	\end{theorem}
+\end{flashcard}
+
+\begin{enumerate}
+	\item $M$ l-messbar $\implies$  $M^C$ l-messbar
+	\item $M$ l-messbar $\implies$  $\forall x \in  \R^n$ ist $x + M$ l-messbar
+	\item $L$ , $M$ l-messbar $\implies$ $L \cap  M $ l-messbar
+	\item $L$ , $M$ l-messbar $\implies$ $L \cup  M $ l-messbar
+	\item $Q$ - Quader $\implies$ $Q$ l-messbar
+	\item $\hat{\mu }(M) = 0 \implies $ $M$ l-messbar, $\mu(M) = 0$ und $M$ Nullmenge
+\end{enumerate}
+
+\begin{lemma}
+	Es existieren nicht l-messbare Mengen. o.O
+\end{lemma}
+
 \end{zettel}
 \end{document}
 
