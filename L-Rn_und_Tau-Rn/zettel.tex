@@ -1,0 +1,27 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{$\mathcal{L}_{\R^n}$ und $\tau_{\R^n}$}
+
+\begin{flashcard}[eh1bs6w7]{$\mathcal{L}_{\R^n}$ und $\tau_{\R^n}$}
+	\begin{definition}
+		\[
+			\mathcal{L}_{\R^n} = \set{M \subset \R^n}{M \tx{l-messbar}} \tx{und} \tau_{ \R^n} = \set{U \subset \R^n}{U \tx{offen} }
+		.\]
+	\end{definition}
+\end{flashcard}
+
+\begin{lemma}
+	Eigenschaften
+	\begin{enumerate}
+		\item $U \in \tau_{ \R^n } \implies U, U^C \in  \La_{ \R^n }$ \ \ Borellsche Eigenschaft
+		\item $M \in  \La_{ \R^n } \implies M^C  \in  \La_{ \R^n }$
+		\item $\set{M_i}_{i \in  \N } \subset  \La_{ \R^n } \implies \bigcup_{i \in  \N  } M_i, \bigcap_{i \in  \N  } M_i \in  \La_{ \R^n }$ \ \ $\sigma$-Algebra Eigenschaft
+	\end{enumerate}
+\end{lemma}
+\end{zettel}
+\end{document}
+
