@@ -1,0 +1,26 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{messbare Abbildung}
+\begin{flashcard}[0nbob1oo]{messbare Abbildung  ($\sigma$-Algebren)}
+	\begin{definition}[messbare Abbildung]
+		Seien $(X,B), (Y,C)$ (mit $B \subset  \Pot (X), C \subset  \Pot(Y)$ ) $\sigma$-Algebren\\
+		$f: X \to  Y$ messbar falls
+		\[
+			\forall M \in C : f^{-1}(M) \in B
+		.\]
+	\end{definition}
+	\begin{remark}
+		Falls $Y = \R $ verwenden wir norm. Borellsche $\sigma$-Algebra f"ur $C$ . Es reicht dann $\forall a \in \R : f^{-1}((-\infty, a)) \in B $
+	\end{remark}
+\end{flashcard}
+
+\begin{lemma}[Eigenschaften]
+	TODO
+\end{lemma}
+\end{zettel}
+\end{document}
+

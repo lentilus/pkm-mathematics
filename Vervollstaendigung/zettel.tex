@@ -1,0 +1,31 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Vervollstaendigung}
+\begin{flashcard}[4v8te4xo]{Vervollstaendigung}
+
+	\begin{definition}[Vervollstaendigung]
+		$(X,B,\mu)$-Massraum mit
+		\[
+			\bar{B} = \set{M \cup N}{M \in B, N \subset  X \tx{mit} \hat{\mu } = 0} \subset \Pot(X)
+		.\]
+		Mit $\hat{\mu }$ das erzeugte Mass:
+		\begin{align*}
+			\hat{\mu} : \Pot(X) \to  \hat{\mu }(Y) & = \inf \set{\sum_{i = 1}^{\infty}\mu(M_i)}{M_i \in B \forall i , Y \subset \bigcup_{i = 1}^{\infty}M_i} \\
+			                                       & = \inf \set{\mu(M)}{M \in B, Y \subset  M}
+		\end{align*}
+		Nun ist
+		\[
+			\bar{\mu } = \hat{\mu } \constrain {\bar{B}}
+		.\]
+	\end{definition}
+	\begin{remark}
+		Weil $B$ eine $\sigma$-Algebra (anders als bei Hahn-Kolmogorov) ist $\bigcup_{i = 1}^{\infty}= M \in B$
+	\end{remark}
+\end{flashcard}
+\end{zettel}
+\end{document}
+

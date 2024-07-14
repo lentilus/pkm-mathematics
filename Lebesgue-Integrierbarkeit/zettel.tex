@@ -1,0 +1,55 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Lebesgue-Integrierbarkeit}
+
+\begin{definition}
+	\[
+		f_+:= \max \set{f(x), 0}, \quad  f_-:= \min \set{0, f(x)}
+	.\]
+\end{definition}
+
+\begin{flashcard}[cvdhrfg9]{Lebesgue-Integrierbarkeit, l-Integral}
+	$\Omega \in  \lmable$  und $f: \Omega \to  \hat{\R  }$  $f$ ist integrierbar falls
+	\[
+		\int_{\Omega} |f | \leq \infty
+	.\]
+	\[
+		\int_{\Omega} f := \int_{\Omega} f_+ - \int_{\Omega} f_-
+	.\]
+\end{flashcard}
+
+\begin{flashcard}[ziotrt7v]{Lebesgue-Integrierbarkeit (aus Riemann)}
+	$\Omega \in  \lmable, f:\Omega \to  \R $ beliebig.
+
+	\begin{align*}
+		\bar{\int_{\Omega}f}       & := \inf \set{\int_{\Omega} g}{g:\Omega \to  \R \tx{int-bar}, g(x)\geq  f(x)\forall x \in  \Omega } \\
+		\underline{\int_{\Omega}f} & := \inf \set{\int_{\Omega} g}{g:\Omega \to  \R \tx{int-bar}, g(x)\leq  f(x)\forall x \in  \Omega } \\
+	\end{align*}
+
+	Bemerke, dass $\bar{\int_{\Omega} f} \geq \underline{\int_{\Omega}f}$
+
+	\begin{lemma}
+		$f$ genau dann integrierbar wenn
+		\[
+			\bar{\int_{\Omega}f} = \underline{\int_{\Omega}f} \qquad \left(= \int_{\Omega} f \right)
+		.\]
+	\end{lemma}
+\end{flashcard}
+
+\begin{lemma}[Eigenschaften l-integrierbarer Funktionen]
+	% TODO
+\end{lemma}
+
+\begin{flashcard}[cqtcrghu]{Lebesgue-Integrierbarkeit $\R ^1$ }
+	\begin{theorem}
+		$R \supset I$ beschr"ankt und $f: I \to  \R $ r-integrierbar $\implies$ $f$ l-integrierbar (und Integrale gleich.  )
+	\end{theorem}
+\end{flashcard}
+
+\end{zettel}
+\end{document}
+

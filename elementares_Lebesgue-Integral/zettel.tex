@@ -1,0 +1,29 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{elementares Lebesgue-Integral}
+\begin{flashcard}[e3tf5t7v]{elementares Lebesgue-Integral}
+	$\Omega \in  \lmable$ und $f: \Omega \to  [0, \infty)$.
+	\begin{align*}
+		e \int_{\Omega} f & := \sum_{\lambda \in  f(\Omega)} \delta \cdot \mu(\Omega_\lambda ) \quad \tx{mit} \Omega_{\lambda} = f^{-1}(\lambda) \\
+		                  & = \sum_{i = 1}^{k} c_i \mu ( f^{-1}(c_i))
+	\end{align*}
+\end{flashcard}
+
+\begin{flashcard}[1rwb09r5]{Verallgemeinerung elementares Lebesgue-Integral}
+	$c_i \in  \R $ , $E_i \in  \lmable$ beliebig. Dann
+	\[
+		e \int_{\Omega} \left(\sum_{i}^{k} c_i \xi_{E_i}\right) = \sum c_i \mu(E_i)
+	.\]
+\end{flashcard}
+
+\begin{lemma}[Eigenschaften elementares Lebesgue-Integral]
+	% TODO
+\end{lemma}
+
+\end{zettel}
+\end{document}
+

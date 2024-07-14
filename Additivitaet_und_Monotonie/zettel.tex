@@ -1,0 +1,41 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Additivitaet}
+
+\begin{flashcard}[jlfedjrp]{Additivitaet}
+	\begin{definition}
+		$R$ - Ring (oder Algebra). Dann ist $\lambda : R \to  \hat{\R }$ (mit $\exists A \in R : \lambda(A) < \infty$ ) additiv falls
+		\[
+			\forall A,B \in R \tx{mit} A \cap  B = \emptyset  : \lambda(A \sqcup B) = \lambda(A) + \lambda(B)
+		.\]
+	\end{definition}
+\end{flashcard}
+
+\begin{flashcard}[dywlxykg]{$\sigma$-Additivitaet}
+	Sei $R^{\sigma}$ - $\sigma$-Ring (oder -Algebra). Dann ist $\lambda : R^\sigma \to  \hat{\R }$ (mit $\exists A \in R^\sigma : \lambda(A) < \infty$ ) $\sigma$-additiv falls
+	\[
+		\forall \set{A_i}_{i \in \N } \tx{mit} A_i \cap  A_j = \emptyset  \forall i \neq  j : \lambda \left( \bigsqcup_i^{\infty}A_i \right) = \sum_{i}^{\infty} \lambda(A_i)
+	.\]
+\end{flashcard}
+
+\begin{flashcard}[dywlxykg]{$\sigma$-Subadditivitaet}
+	Sei $R^{\sigma}$ - $\sigma$-Ring (oder -Algebra). Dann ist $\lambda : R^\sigma \to  \hat{\R }$ (mit $\exists A \in R^\sigma : \lambda(A) < \infty$ ) $\sigma$-subadditiv falls
+	\[
+		\forall \set{A_i}_{i \in \N } \tx{mit} A_i \cap  A_j = \emptyset  \forall i \neq  j : \lambda \left( \bigsqcup_i^{\infty}A_i \right) \leq \sum_{i}^{\infty} \lambda(A_i)
+	.\]
+\end{flashcard}
+
+\begin{flashcard}[dywlxykg]{monoton (Ring, Algebra)}
+	Sei $R$ -Ring (oder Algebra). Dann ist $\lambda : R \to  \hat{\R }$ (mit $\exists A \in R^\sigma : \lambda(A) < \infty$ ) monoton falls
+	\[
+		\forall A \in R : \lambda(A) \geq 0
+	.\]
+\end{flashcard}
+
+\end{zettel}
+\end{document}
+

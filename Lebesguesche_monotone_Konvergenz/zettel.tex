@@ -1,0 +1,20 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Lebesguesche monotone Konvergenz}
+\begin{flashcard}[0kzt6a2a]{Lebesguesche monotone Konvergenz}
+	\begin{theorem}
+		$\Omega \in  \lmable$, $f_m : \Omega \to  [0,\infty]$ eine Folge messbarer Funktionen $f_1(x)\leq f_2(x) \dots f_m(x) \leq  \dots \quad \forall x \in \Omega$.
+
+		Dann ist
+		\[
+			0 \leq \int_{\Omega}f_1 \leq \dots \leq \int_{\Omega} f_m \leq \dots \tx{und}  \int_{\Omega} \sup_m f_m = \sup_m \int_{\Omega } f_m
+		.\]
+	\end{theorem}
+\end{flashcard}
+\end{zettel}
+\end{document}
+

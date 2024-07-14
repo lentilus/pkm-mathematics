@@ -1,0 +1,27 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Satz von Lebesgue bzw Majorisierte Konvergenz}
+
+\begin{flashcard}[12t359wt]{Satz von Lebesgue bzw Majorisierte Konvergenz}
+	\begin{theorem}[mojorisierte Konvergenz / Satz von Lebesgue]
+		Sei $\Omega \in  \lmable$, $f_n: \Omega \to  \hat{\R  }$ Folge messbarer Funktionen, die Punktweise konvergiert.
+
+		Sei $F: \Omega \to [0,\infty]$ integrierbar mit
+		\[
+			|f_n(x) | \leq  F(x)uad \forall n \forall x \in \Omega
+		.\]
+
+		dann
+		\[
+			\int_{\Omega} \lim_{n \to  \infty} f_n =  \lim_{n \to  \infty} \int_{\Omega}  f_n
+		.\]
+	\end{theorem}
+\end{flashcard}
+
+\end{zettel}
+\end{document}
+

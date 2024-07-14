@@ -1,0 +1,27 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Hahn-Kolomogorov Caratheodory}
+\begin{flashcard}[3bgjad2m]{Hahn-Kolomogorov Caratheodory}
+	\begin{theorem}
+		$R$-Ring/Algebra auf $\subset X$, $\lambda : R \to  [0,\infty]$ - Praemass mit $\lambda(\emptyset ) = 0$.
+		\[
+			\implies \exists \tx{Fortsetzung zu Mass} \mu : R^{\sigma}t o[0,\infty] \tx{mit} \mu \constrain R = \lambda
+		.\]
+	\end{theorem}
+
+	Falls $\exists$ aufsteigende Familie $\set{F_i}{i \in \N} \subset R$ mit $U_{i = 1}^{\infty}F_i = X$ und $\lambda(F_i) < \infty \forall i$ $\implies$ $\mu$ eindeutig.
+\end{flashcard}
+
+\begin{flashcard}[v2z9a3l7]{Eigenschaften Mass HK}
+	\begin{enumerate}
+		\item $\sigma$-additiv $\implies$ $\sigma$-subadditiv.
+		\item Masse aufsteigender (absteigender Ketten) sind der Limes.
+	\end{enumerate}
+\end{flashcard}
+\end{zettel}
+\end{document}
+
