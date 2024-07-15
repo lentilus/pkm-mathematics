@@ -1,0 +1,27 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{elementares Integral}
+\begin{flashcard}[6m146u9w]{elementares Integral}
+	sehr analog zum elementaren lebesgue-Integral
+	\begin{definition}
+		$f: X \to  [0,\infty]$ elementar.
+		\[
+			e \int f d\mu := \sum_{\lambda \in f(X) \setminus \set{0}} \lambda \cdot  \mu (f^{-1}(\lambda)) \quad (\mu(f^{-1}(0)) = \infty \tx{ist zugelassen} )
+		.\]
+		\[
+			e \int_{X} \sum c_i \chi_{A_i} d\mu = \sum c_i \mu(A_i) \quad (\text{falls } \mu(A_i) = \infty, c_i = 0 \implies  0 \cdot  \infty = 0)
+		.\]
+	\end{definition}
+\end{flashcard}
+
+\begin{lemma}[Eigenschaften]
+	TODO
+\end{lemma}
+
+\end{zettel}
+\end{document}
+

@@ -7,58 +7,64 @@
 \begin{zettel}{lokale Umkehrbarkeit}
 
 \begin{flashcard}[svvujhnu]{Satz von der lokalen Umkehrbarkeit}
-	\begin{theorem}[Satz von der lokalen Umkehrbarkeit]
-		$V,W$ normierte Vektorräume, $\dim V,W < \infty$.  $U \subset V$
-		\[
-			U \stackrel{f}{\to} W,\quad f \in C'(U,W),\quad a \in U \text{ s.d } D_af: V \to W - \text{ Isomorphismus }
-		.\]
-		Dann $\exists $ offene $U_0 \subseteq U$ mit $a \in U_0$ s.d $f( U_0 ) $-offene Umgebung von $f( a ) $ und $f \constrain{U_0} $- Diffeomorphismus: $\exists $ inverses $g : f( U_0 ) \to U_0, g \in C'(f(U_0),V) $
+	% \begin{theorem}[Satz von der lokalen Umkehrbarkeit]
+	% 	$V,W$ normierte Vektorräume, $\dim V,W < \infty$.  $U \subset V$
+	% 	\[
+	% 		U \stackrel{f}{\to} W,\quad f \in C'(U,W),\quad a \in U \text{ s.d } D_af: V \to W - \text{ Isomorphismus }
+	% 	.\]
+	% 	Dann $\exists $ offene $U_0 \subseteq U$ mit $a \in U_0$ s.d $f( U_0 ) $-offene Umgebung von $f( a ) $ und $f \constrain{U_0} $- Diffeomorphismus: $\exists $ inverses $g : f( U_0 ) \to U_0, g \in C'(f(U_0),V) $
+	% \end{theorem}
+
+	\begin{theorem}[Satz der lokalen Umkehrbarkeit]
+		$V,W$ normierte, endlichdimensionale VR.\\
+		Sei $U \subset  V$, $f: U \to  W$ stetig diffbar.\\
+		Falls $D_a f : U \to W$ Isomorphismus (Jacobi-Matrix invertierbar)$\implies \exists$ offene Umgebung $U_a \subset  U$ und eine offene Umgebung $f(U_a)$ um $f(a)$ , sodass $f\constrain {U_a}$ Diffeomorphismus (bijektiv auf $U_a$).
 	\end{theorem}
 \end{flashcard}
 
-\begin{proof}
-	$\implies \Phi_y \cdot  \bar{B_{2\delta}(o)} \to  \bar{B_{2\delta}(o)}$ eine Kontraktion eines vollst"anideng metrichen Raumens. $\implies  \exists ! \tx{ Fixpunkt } x_y \in \bar{B_{2\delta}(o)}: \Phi_y(x_y) ee x_y \iff  f(x_y)= y \implies  B_{\delta}(o) \subset  f (B_{2\delta}(o)) $ und man definiert die Umkehrabbildung $g: B_{\delta}(o) \to  f^{-1}(B_{\delta}(o))$
-	\[
-		g(y) = x_y: f \circ  g = id_{B_{\delta}(o)} \quad g \circ  f = \dots
-	.\]
-
-	Zu zeigen:
-	\begin{enumerate}
-		\item $g$ - stetig
-		\item $g$ -diffbar
-		\item $D_g$ -stetig
-	\end{enumerate}
-
-	\begin{enumerate}
-		\item $y_1, y_2 \in  B_{\delta}(o) \quad x_i = g(y_i) \quad i =1,2 \implies y_1 = f(x_i)$
-
-		      $x_2 - x_1 = \Phi_o(x_2) - \Phi_o(x_1) + f(x_2) - f(x_1) \implies \norm{x_2 - x_1} \leq  \norm{\Phi_o(x_2) - \Phi_o(x_2)} + \norm{ f(x_2) - f(x_1)}$ $\leq  \frac{1}{2} \norm{x_2-x_1} + \norm{ f(x_2) - f(x_1)} \iff $
-		      $\iff \norm{g(y_2) - g(y_1)} \leq  \norm{y_1 - y_2} \iff \norm{g(y_2) - g(y_1)} \leq 2\norm{y_1-y_2}$
-		      $g$ ist Lipschtiz-stetig dh. $g$ ist stetig.
-
-		\item $f$ ist diffbar an $D \in  U$ d.$h$ f"ur $R(h) = f(h) - D_o f(h) = f(h) - h$  gilt
-		      \[
-			      \frac{\norm{R(h)}}{\norm{h}} \stackrel{h \to  0}{\to} 0
-		      .\]
-		      F"ur $k \in  B_{\delta}(o)$ definiert man $id_V$ $S(k) = g(k) - k $
-		      (Wir werden zeigen, dass $g$ diffbar an $o \in  B_{\delta}(o)$ mit $D_o g = id_V$ )\\
-		      $k = f(h) = h + R(h), h = g(k) = k + S(k)$
-
-		      $h = g(f(h)) = g(h + R(h)) = h + R(h) + S(h + R(h)) \implies R(h) = - S(h + R(h))$
-
-		      Analog: $ R (g(k)) + S(k) \stackrel{\ast }{=} 0$. $\exists \delta_1 > 0 : \forall  h $
-		      mit $\norm{h} \leq  \delta_1$ gilt $R(h) \leq  \frac{1}{2} \norm{h}$.
-		      Aus $1.$ folgt $\exists  \delta_2 > 0 : \forall  k \tx{  mit }  \norm{k} < \delta_2$
-		      gilt $\norm{g(k)} < \delta_1$ (Stetigkeit von $g$ )
-		      $\ast $ : $ \norm{ S(k)} =  \norm{- R(g(k))} \leq  \frac{1}{2} \norm{g(k)}$
-		      $ \implies  \norm{k} \geq  \norm{g(k) - S(k)} \geq  \frac{1}{2} \norm{g(k)}$
-		      $\implies \norm{g(k)} \leq 2  \norm{k} \iff \frac{1}{\norm{k}} \stackrel{\ast \ast }{\leq} \frac{2}{ \norm{g(k)}}$
-
-		      $\ast  \ast $ : nicht mehr mitgeshrieben. Wir folgern:
-		      $\implies  \forall  b \in  B_{\delta}(o)$ ist $g$ an $b$ diffbar und $ (D_b g) = ( D_{g(b)} f )$
-		\item $L \in  \Hom_\K(V,V) =: \stackrel{\tx{ normierter Raum } }{\End_ \K (V)} \supset Aut_k(V) = \set{L}{\exists L^{-1}}$ - offene Teilmenge ... nicht weiter mitgeshrieben
-	\end{enumerate}
-
-\end{proof}
+% \begin{proof}
+% 	$\implies \Phi_y \cdot  \bar{B_{2\delta}(o)} \to  \bar{B_{2\delta}(o)}$ eine Kontraktion eines vollst"anideng metrichen Raumens. $\implies  \exists ! \tx{ Fixpunkt } x_y \in \bar{B_{2\delta}(o)}: \Phi_y(x_y) ee x_y \iff  f(x_y)= y \implies  B_{\delta}(o) \subset  f (B_{2\delta}(o)) $ und man definiert die Umkehrabbildung $g: B_{\delta}(o) \to  f^{-1}(B_{\delta}(o))$
+% 	\[
+% 		g(y) = x_y: f \circ  g = id_{B_{\delta}(o)} \quad g \circ  f = \dots
+% 	.\]
+%
+% 	Zu zeigen:
+% 	\begin{enumerate}
+% 		\item $g$ - stetig
+% 		\item $g$ -diffbar
+% 		\item $D_g$ -stetig
+% 	\end{enumerate}
+%
+% 	\begin{enumerate}
+% 		\item $y_1, y_2 \in  B_{\delta}(o) \quad x_i = g(y_i) \quad i =1,2 \implies y_1 = f(x_i)$
+%
+% 		      $x_2 - x_1 = \Phi_o(x_2) - \Phi_o(x_1) + f(x_2) - f(x_1) \implies \norm{x_2 - x_1} \leq  \norm{\Phi_o(x_2) - \Phi_o(x_2)} + \norm{ f(x_2) - f(x_1)}$ $\leq  \frac{1}{2} \norm{x_2-x_1} + \norm{ f(x_2) - f(x_1)} \iff $
+% 		      $\iff \norm{g(y_2) - g(y_1)} \leq  \norm{y_1 - y_2} \iff \norm{g(y_2) - g(y_1)} \leq 2\norm{y_1-y_2}$
+% 		      $g$ ist Lipschtiz-stetig dh. $g$ ist stetig.
+%
+% 		\item $f$ ist diffbar an $D \in  U$ d.$h$ f"ur $R(h) = f(h) - D_o f(h) = f(h) - h$  gilt
+% 		      \[
+% 			      \frac{\norm{R(h)}}{\norm{h}} \stackrel{h \to  0}{\to} 0
+% 		      .\]
+% 		      F"ur $k \in  B_{\delta}(o)$ definiert man $id_V$ $S(k) = g(k) - k $
+% 		      (Wir werden zeigen, dass $g$ diffbar an $o \in  B_{\delta}(o)$ mit $D_o g = id_V$ )\\
+% 		      $k = f(h) = h + R(h), h = g(k) = k + S(k)$
+%
+% 		      $h = g(f(h)) = g(h + R(h)) = h + R(h) + S(h + R(h)) \implies R(h) = - S(h + R(h))$
+%
+% 		      Analog: $ R (g(k)) + S(k) \stackrel{\ast }{=} 0$. $\exists \delta_1 > 0 : \forall  h $
+% 		      mit $\norm{h} \leq  \delta_1$ gilt $R(h) \leq  \frac{1}{2} \norm{h}$.
+% 		      Aus $1.$ folgt $\exists  \delta_2 > 0 : \forall  k \tx{  mit }  \norm{k} < \delta_2$
+% 		      gilt $\norm{g(k)} < \delta_1$ (Stetigkeit von $g$ )
+% 		      $\ast $ : $ \norm{ S(k)} =  \norm{- R(g(k))} \leq  \frac{1}{2} \norm{g(k)}$
+% 		      $ \implies  \norm{k} \geq  \norm{g(k) - S(k)} \geq  \frac{1}{2} \norm{g(k)}$
+% 		      $\implies \norm{g(k)} \leq 2  \norm{k} \iff \frac{1}{\norm{k}} \stackrel{\ast \ast }{\leq} \frac{2}{ \norm{g(k)}}$
+%
+% 		      $\ast  \ast $ : nicht mehr mitgeshrieben. Wir folgern:
+% 		      $\implies  \forall  b \in  B_{\delta}(o)$ ist $g$ an $b$ diffbar und $ (D_b g) = ( D_{g(b)} f )$
+% 		\item $L \in  \Hom_\K(V,V) =: \stackrel{\tx{ normierter Raum } }{\End_ \K (V)} \supset Aut_k(V) = \set{L}{\exists L^{-1}}$ - offene Teilmenge ... nicht weiter mitgeshrieben
+% 	\end{enumerate}
+%
+% \end{proof}
 \end{zettel}
 \end{document}

@@ -1,0 +1,66 @@
+%! TeX root = zettel.tex
+\documentclass[class=article, crop=false]{standalone}
+\usepackage[subpreambles=true]{standalone}
+\input{../standalone_preamble.tex}
+
+\begin{document}
+\begin{zettel}{Integral aus Mass}
+\begin{flashcard}[jaecw7pt]{Integral von nicht-negativen Funktionen}
+	\begin{definition}[Integral von nicht-negativen Funktionen]
+		$f: X \to  [0,\infty]$  messbar, dann
+		\[
+			\int_{X} fd\mu := \sup \set{e \int \int_{X} gd\mu}{g \leq  f, g \tx{einfach} }
+		.\]
+	\end{definition}
+\end{flashcard}
+\begin{lemma}[Eigenschaften]
+	TODO
+\end{lemma}
+
+\begin{flashcard}[aqs7rf0k]{Annaeherung messbarer Funktion durch einfache}
+	\begin{lemma}
+		$f:X \to  [0,\infty] \implies \exists$ Folge einfacher Funktionen $s_1 \leq \dots \leq s_k \leq \dots$ mit
+		\[
+			f(x) = \lim_{k \to \infty} s_k(x).
+		.\]
+	\end{lemma}
+\end{flashcard}
+
+\begin{flashcard}[r1396eph]{monotone Konvergenz Integral}
+	\begin{definition}
+		$f_n : X \to  [0,\infty]$ aufsteigende Folge messbarer Funktionen. Dann
+		\[
+			\int_{X} \sup f_n d\mu = \sup \int_{X} f_n d\mu
+		.\]
+	\end{definition}
+\end{flashcard}
+
+\begin{flashcard}[d1o0mf6y]{Additivitaet Integral}
+	$f,g : X \to  [0,\infty]$ messbar. Dann
+	\[
+		\int_{X}(f + g) d\mu = \int_{X} fd\mu + \int_{X} gd\mu
+	.\]
+\end{flashcard}
+
+\begin{flashcard}[1qexfp0s]{absolut integrierbar}
+	\begin{definition}[absolut Integrierbar]
+		$f: X \to  \hat{\R }$ messbar (bez"uglich $B$ auf $X$ , $B_{\R}$ auf $\R $) heisst (absolut) integrierbar falls
+		\[
+			\int_{X} f_{\pm }d\mu < \infty \iff \int_{X} |f| d\mu < \infty
+		.\]
+	\end{definition}
+	Man kann sich mit Zusaetzen etwas aehnliches fuer $\C $ basteln.
+\end{flashcard}
+
+\begin{flashcard}[c5nqxbd1]{Majorisierte Konvergenz (allgemein)}
+	\begin{theorem}[Majorisierte Konvergenz]
+		$f_n :X \to  \hat{\R }$ Folge mesbarer Funktionen. $F \in L'(X,B,\mu)$ mit $ |f_n(x) | < |F(x)| \quad \forall x$.
+		Dann
+		\[
+			\lim_{n \to \infty} \int_{X} f_n d\mu = \int_{X} \left(\lim_{n \to \infty} f_n \right) d\mu
+		.\]
+	\end{theorem}
+\end{flashcard}
+\end{zettel}
+\end{document}
+
